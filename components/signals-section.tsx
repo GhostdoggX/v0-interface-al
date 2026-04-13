@@ -166,18 +166,18 @@ function SignalCard({
   return (
     <article
       className={cn(
-        "group relative flex-shrink-0 w-80",
+        "group relative flex-shrink-0 w-72",
         "transition-transform duration-500 ease-out",
         "hover:-translate-y-2",
       )}
     >
       {/* Card with paper texture effect */}
-      <div className="relative bg-card border border-border/50 md:border-t md:border-l md:border-r-0 md:border-b-0 p-8">
+      <div className="relative bg-card border border-border/50 md:border-t md:border-l md:border-r-0 md:border-b-0 p-6">
         {/* Top torn edge effect */}
         <div className="absolute -top-px left-0 right-0 h-px bg-gradient-to-r from-transparent via-border/40 to-transparent" />
 
         {/* Issue number - editorial style */}
-        <div className="flex items-baseline justify-between mb-8">
+        <div className="flex items-baseline justify-between mb-6">
           <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
             No. {String(index + 1).padStart(2, "0")}
           </span>
@@ -185,12 +185,12 @@ function SignalCard({
         </div>
 
         {/* Title */}
-        <h3 className="font-[var(--font-bebas)] text-4xl tracking-tight mb-4 group-hover:text-accent transition-colors duration-300">
+        <h3 className="font-[var(--font-bebas)] text-3xl tracking-tight mb-3 group-hover:text-accent transition-colors duration-300">
           {signal.title}
         </h3>
 
         {/* Divider line */}
-        <div className="w-12 h-px bg-accent/60 mb-6 group-hover:w-full transition-all duration-500" />
+        <div className="w-12 h-px bg-accent/60 mb-4 group-hover:w-full transition-all duration-500" />
 
         {/* Description */}
         <p className="font-mono text-xs text-muted-foreground leading-relaxed">{signal.note}</p>
