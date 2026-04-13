@@ -139,6 +139,14 @@ export function ColophonSection() {
                 Consultation
               </a>
             </li>
+            <li>
+              <a
+                href="/privacy"
+                className="font-mono text-xs text-foreground/80 hover:text-accent transition-colors duration-200"
+              >
+                Privacy
+              </a>
+            </li>
           </ul>
         </div>
 
