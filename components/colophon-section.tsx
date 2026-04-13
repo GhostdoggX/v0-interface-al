@@ -76,7 +76,17 @@ export function ColophonSection() {
       {/* Section header */}
       <div ref={headerRef} className="mb-16">
         <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">05 / Contact</span>
-        <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">INITIATE CONTACT</h2>
+        <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">GET IN TOUCH</h2>
+        <p className="mt-6 max-w-md font-mono text-sm text-muted-foreground leading-relaxed">
+          Ready to discuss your investigation needs?
+        </p>
+        <a
+          href="mailto:info@enquiries.wolfhoundtrace.com?subject=Service%20initial%20consultation"
+          className="mt-8 inline-flex items-center gap-3 border border-foreground/20 px-6 py-3 font-mono text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200"
+        >
+          Initiate Contact
+          <span className="transition-transform duration-300 hover:translate-x-1">→</span>
+        </a>
       </div>
 
       {/* Multi-column layout */}
