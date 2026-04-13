@@ -1,5 +1,7 @@
 import Link from "next/link"
 import type { Metadata } from "next"
+import { SplitFlapText, SplitFlapMuteToggle, SplitFlapAudioProvider } from "@/components/split-flap-text"
+import { AnimatedNoise } from "@/components/animated-noise"
 
 export const metadata: Metadata = {
   title: "About Us | Wolfhound Trace",
@@ -11,29 +13,58 @@ export default function AboutPage() {
     <main className="relative min-h-screen bg-background">
       <div className="grid-bg fixed inset-0 opacity-30" aria-hidden="true" />
       
-      <div className="relative z-10 px-6 md:px-12 lg:px-24 py-16 md:py-24">
-        {/* Header */}
-        <header className="mb-16 md:mb-24">
-          <Link 
-            href="/" 
-            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-accent transition-colors duration-200 mb-8"
-          >
-            <span className="rotate-180">→</span>
-            Back to Home
-          </Link>
-          
-          <div>
-            <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">About Us</span>
-            <h1 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl lg:text-8xl tracking-tight">
-              WOLFHOUND<span className="text-accent">TRACE</span>
-            </h1>
-            <h2 className="mt-2 font-[var(--font-bebas)] text-2xl md:text-3xl text-muted-foreground/60 tracking-wide">
-              Investigations
-            </h2>
-          </div>
-        </header>
+      {/* Hero Header - matching main page */}
+      <header className="relative min-h-[60vh] flex items-center pl-6 md:pl-28 pr-6 md:pr-12">
+        <AnimatedNoise opacity={0.03} />
+        
+        {/* Left vertical labels */}
+        <div className="absolute left-4 md:left-6 top-1/2 -translate-y-1/2">
+          <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground -rotate-90 origin-left block whitespace-nowrap">
+            ABOUT
+          </span>
+        </div>
 
-        {/* Content */}
+        {/* Main content */}
+        <div className="flex-1 w-full">
+          <SplitFlapAudioProvider>
+            <div className="relative flex flex-col">
+              <SplitFlapText text="WOLFHOUND" speed={80} className="text-scale-sm" />
+              <SplitFlapText text="TRACE" speed={80} className="text-scale-sm text-accent" isAccent />
+              <div className="mt-4">
+                <SplitFlapMuteToggle />
+              </div>
+            </div>
+          </SplitFlapAudioProvider>
+
+          <h2 className="font-[var(--font-bebas)] text-muted-foreground/60 text-[clamp(1rem,3vw,2rem)] mt-6 tracking-wide">
+            About Us
+          </h2>
+
+          <p className="mt-12 max-w-md font-mono text-sm text-muted-foreground leading-relaxed">
+            The people and principles behind WolfhoundTrace Investigations.
+          </p>
+
+          <div className="mt-16">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-accent transition-colors duration-200"
+            >
+              <span className="rotate-180">→</span>
+              Back to Home
+            </Link>
+          </div>
+        </div>
+
+        {/* Floating info tag */}
+        <div className="absolute bottom-8 right-8 md:bottom-12 md:right-12">
+          <div className="border border-border px-4 py-2 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
+            Wolfhound Trace / About
+          </div>
+        </div>
+      </header>
+
+      {/* Content Section */}
+      <div className="relative z-10 px-6 md:pl-28 md:pr-12 py-16 md:py-24">
         <article className="max-w-3xl">
           {/* Greeting */}
           <section className="mb-16">
