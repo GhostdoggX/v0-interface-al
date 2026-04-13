@@ -170,10 +170,17 @@ export function ColophonSection() {
         </div>
       </div>
 
+      {/* Disclaimer */}
+      <div className="mt-16 pt-8 border-t border-border/20">
+        <p className="font-mono text-[10px] text-muted-foreground/70 leading-relaxed max-w-4xl">
+          Wolfhound Trace provides professional open-source intelligence (OSINT), digital investigation, and due diligence services. All investigations are conducted in compliance with applicable laws and regulations, including GDPR and data protection standards.
+        </p>
+      </div>
+
       {/* Bottom copyright */}
       <div
         ref={footerRef}
-        className="mt-24 pt-8 border-t border-border/20 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
+        className="mt-8 pt-8 border-t border-border/20 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
       >
         <p className="font-mono text-[10px] text-muted-foreground uppercase tracking-widest">
           © 2025 Wolfhound Trace. All communications handled with discretion.
