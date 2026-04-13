@@ -18,9 +18,9 @@ const ibmPlexMono = IBM_Plex_Mono({
 const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"], variable: "--font-bebas" })
 
 export const metadata: Metadata = {
-  title: "SIGNAL — Experimental Creative Studio",
+  title: "Wolfhound Trace | Expert OSINT & Digital Intelligence",
   description:
-    "Interface studies in controlled environments. We design systems that behave, not just screens that display.",
+    "Wolfhound Trace helps clients uncover, verify, and understand complex digital information with discretion, precision, and legally grounded methods.",
   generator: "v0.app",
   icons: {
     icon: [

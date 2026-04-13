@@ -75,47 +75,47 @@ export function ColophonSection() {
     >
       {/* Section header */}
       <div ref={headerRef} className="mb-16">
-        <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">04 / Colophon</span>
-        <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">CREDITS</h2>
+        <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">04 / Contact</span>
+        <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">INITIATE CONTACT</h2>
       </div>
 
       {/* Multi-column layout */}
       <div ref={gridRef} className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 md:gap-12">
-        {/* Design */}
+        {/* Services */}
         <div className="col-span-1">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Design</h4>
+          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Services</h4>
           <ul className="space-y-2">
-            <li className="font-mono text-xs text-foreground/80">Signal Studio</li>
-            <li className="font-mono text-xs text-foreground/80">Interface Lab</li>
+            <li className="font-mono text-xs text-foreground/80">OSINT</li>
+            <li className="font-mono text-xs text-foreground/80">Digital Forensics</li>
           </ul>
         </div>
 
-        {/* Stack */}
+        {/* Specialties */}
         <div className="col-span-1">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Stack</h4>
+          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Specialties</h4>
           <ul className="space-y-2">
-            <li className="font-mono text-xs text-foreground/80">Next.js</li>
-            <li className="font-mono text-xs text-foreground/80">Tailwind CSS</li>
-            <li className="font-mono text-xs text-foreground/80">Vercel</li>
+            <li className="font-mono text-xs text-foreground/80">Crypto Tracing</li>
+            <li className="font-mono text-xs text-foreground/80">Due Diligence</li>
+            <li className="font-mono text-xs text-foreground/80">Asset Discovery</li>
           </ul>
         </div>
 
-        {/* Typography */}
+        {/* Clients */}
         <div className="col-span-1">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Typography</h4>
+          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Clients</h4>
           <ul className="space-y-2">
-            <li className="font-mono text-xs text-foreground/80">Bebas Neue</li>
-            <li className="font-mono text-xs text-foreground/80">Inter</li>
-            <li className="font-mono text-xs text-foreground/80">Geist Mono</li>
+            <li className="font-mono text-xs text-foreground/80">Law Firms</li>
+            <li className="font-mono text-xs text-foreground/80">Corporations</li>
+            <li className="font-mono text-xs text-foreground/80">Private Equity</li>
           </ul>
         </div>
 
         {/* Location */}
         <div className="col-span-1">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Location</h4>
+          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Coverage</h4>
           <ul className="space-y-2">
-            <li className="font-mono text-xs text-foreground/80">Remote</li>
-            <li className="font-mono text-xs text-foreground/80">Everywhere</li>
+            <li className="font-mono text-xs text-foreground/80">Global</li>
+            <li className="font-mono text-xs text-foreground/80">Confidential</li>
           </ul>
         </div>
 
@@ -125,10 +125,10 @@ export function ColophonSection() {
           <ul className="space-y-2">
             <li>
               <a
-                href="mailto:hello@signal.studio"
+                href="mailto:contact@wolfhoundtrace.com"
                 className="font-mono text-xs text-foreground/80 hover:text-accent transition-colors duration-200"
               >
-                Email
+                Secure Email
               </a>
             </li>
             <li>
@@ -136,18 +136,18 @@ export function ColophonSection() {
                 href="#"
                 className="font-mono text-xs text-foreground/80 hover:text-accent transition-colors duration-200"
               >
-                Twitter/X
+                Consultation
               </a>
             </li>
           </ul>
         </div>
 
-        {/* Year */}
+        {/* Security */}
         <div className="col-span-1">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Year</h4>
+          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Security</h4>
           <ul className="space-y-2">
-            <li className="font-mono text-xs text-foreground/80">2025</li>
-            <li className="font-mono text-xs text-foreground/80">Ongoing</li>
+            <li className="font-mono text-xs text-foreground/80">Encrypted</li>
+            <li className="font-mono text-xs text-foreground/80">Confidential</li>
           </ul>
         </div>
       </div>
@@ -158,9 +158,9 @@ export function ColophonSection() {
         className="mt-24 pt-8 border-t border-border/20 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
       >
         <p className="font-mono text-[10px] text-muted-foreground uppercase tracking-widest">
-          © 2025 Signal. All rights reserved.
+          © 2025 Wolfhound Trace. All communications handled with discretion.
         </p>
-        <p className="font-mono text-[10px] text-muted-foreground">Designed with intention. Built with precision.</p>
+        <p className="font-mono text-[10px] text-muted-foreground">Built for clarity, discretion, and verification.</p>
       </div>
     </section>
   )

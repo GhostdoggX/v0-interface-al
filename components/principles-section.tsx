@@ -16,37 +16,37 @@ export function PrinciplesSection() {
     {
       number: "01",
       titleParts: [
-        { text: "INTERFACE", highlight: true },
-        { text: " MINIMALISM", highlight: false },
+        { text: "DISCREET", highlight: true },
+        { text: " HANDLING", highlight: false },
       ],
-      description: "Reduce until only the essential remains. Every element earns its place.",
+      description: "Confidential handling of sensitive investigations and client communications.",
       align: "left",
     },
     {
       number: "02",
       titleParts: [
-        { text: "SYSTEMS", highlight: true },
-        { text: " OVER SCREENS", highlight: false },
+        { text: "VERIFIED", highlight: true },
+        { text: " FINDINGS", highlight: false },
       ],
-      description: "Design behaviors, not just layouts. Build logic that scales.",
+      description: "Every finding is validated before being delivered for decision-making or review.",
       align: "right",
     },
     {
       number: "03",
       titleParts: [
-        { text: "CONTROLLED ", highlight: false },
-        { text: "TENSION", highlight: true },
+        { text: "TARGETED ", highlight: false },
+        { text: "PRECISION", highlight: true },
       ],
-      description: "Balance between restraint and expression. Confidence without excess.",
+      description: "Focused intelligence work designed to answer specific questions with clarity.",
       align: "left",
     },
     {
       number: "04",
       titleParts: [
-        { text: "SIGNAL ", highlight: false },
-        { text: "CLARITY", highlight: true },
+        { text: "LEGALLY ", highlight: false },
+        { text: "GROUNDED", highlight: true },
       ],
-      description: "Communication that cuts through noise. Precision in every interaction.",
+      description: "Methods that are ethically sound and legally defensible in any jurisdiction.",
       align: "right",
     },
   ]
@@ -94,7 +94,7 @@ export function PrinciplesSection() {
       {/* Section header */}
       <div ref={headerRef} className="mb-24">
         <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">03 / Principles</span>
-        <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">HOW WE WORK</h2>
+        <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">OUR APPROACH</h2>
       </div>
 
       {/* Staggered principles */}

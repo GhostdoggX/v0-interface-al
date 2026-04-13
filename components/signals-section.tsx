@@ -10,28 +10,28 @@ gsap.registerPlugin(ScrollTrigger)
 const signals = [
   {
     date: "2025.06.10",
-    title: "Signal Field",
-    note: "New interface paradigm for ambient computing environments.",
+    title: "Crypto Forensics",
+    note: "Enhanced blockchain analysis capabilities for cross-chain investigations.",
   },
   {
     date: "2025.05.28",
-    title: "Silent Agent",
-    note: "Orchestration layer for autonomous design systems.",
+    title: "Dark Web Monitoring",
+    note: "Proactive threat detection across hidden networks and forums.",
   },
   {
     date: "2025.05.15",
-    title: "Noir Grid",
-    note: "Typographic system for editorial interfaces.",
+    title: "AI-Powered OSINT",
+    note: "Machine learning integration for pattern recognition in large datasets.",
   },
   {
     date: "2025.04.30",
-    title: "Project Lattice",
-    note: "Structural framework for adaptive layouts.",
+    title: "Evidence Preservation",
+    note: "Court-admissible documentation protocols for digital evidence.",
   },
   {
     date: "2025.04.12",
-    title: "Echo Chamber",
-    note: "Audio-visual synthesis in browser environments.",
+    title: "Social Engineering Defense",
+    note: "Vulnerability assessments for corporate information security.",
   },
 ]
 
@@ -135,8 +135,8 @@ export function SignalsSection() {
 
       {/* Section header */}
       <div ref={headerRef} className="mb-16 pr-6 md:pr-12">
-        <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">01 / Signals</span>
-        <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">WHAT&apos;S NEW</h2>
+        <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">01 / Intel</span>
+        <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">LATEST CAPABILITIES</h2>
       </div>
 
       {/* Horizontal scroll container */}

@@ -9,39 +9,39 @@ gsap.registerPlugin(ScrollTrigger)
 
 const experiments = [
   {
-    title: "Project Lattice",
-    medium: "Interface Study",
-    description: "Structural framework for adaptive layouts in dynamic content systems.",
+    title: "Corporate Due Diligence",
+    medium: "Investigation",
+    description: "Comprehensive background verification for business partners, vendors, and investment targets.",
     span: "col-span-2 row-span-2",
   },
   {
-    title: "Signal Field",
-    medium: "Agent Orchestration",
-    description: "Autonomous coordination layer for multi-agent environments.",
+    title: "Digital Forensics",
+    medium: "Analysis",
+    description: "Recovery and examination of digital evidence from devices and online sources.",
     span: "col-span-1 row-span-1",
   },
   {
-    title: "Silent Agent",
-    medium: "Visual System",
-    description: "Non-intrusive interface patterns for ambient computing.",
+    title: "Cryptocurrency Tracing",
+    medium: "Blockchain",
+    description: "Tracking and mapping crypto transactions across wallets and exchanges.",
     span: "col-span-1 row-span-2",
   },
   {
-    title: "Noir Grid",
-    medium: "Typography",
-    description: "High-contrast typographic system for editorial interfaces.",
+    title: "Open-Source Intelligence",
+    medium: "OSINT",
+    description: "Systematic collection and analysis of publicly available information.",
     span: "col-span-1 row-span-1",
   },
   {
-    title: "Echo Chamber",
-    medium: "Audio-Visual",
-    description: "Generative soundscapes mapped to interface interactions.",
+    title: "Asset Discovery",
+    medium: "Research",
+    description: "Identification and verification of undisclosed assets and holdings.",
     span: "col-span-2 row-span-1",
   },
   {
-    title: "Void Protocol",
-    medium: "Experimental",
-    description: "Negative space as primary interaction medium.",
+    title: "Threat Assessment",
+    medium: "Security",
+    description: "Evaluation of digital footprints and potential exposure risks.",
     span: "col-span-1 row-span-1",
   },
 ]
@@ -98,11 +98,11 @@ export function WorkSection() {
       {/* Section header */}
       <div ref={headerRef} className="mb-16 flex items-end justify-between">
         <div>
-          <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02 / Experiments</span>
-          <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">SELECTED WORK</h2>
+          <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02 / Services</span>
+          <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">CAPABILITIES</h2>
         </div>
         <p className="hidden md:block max-w-xs font-mono text-xs text-muted-foreground text-right leading-relaxed">
-          Studies across interface design, agent systems, and visual computation.
+          From corporate due diligence to digital forensics and open-source investigations.
         </p>
       </div>
 
