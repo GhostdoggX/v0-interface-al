@@ -123,11 +123,12 @@ interface SplitFlapTextProps {
   text: string
   className?: string
   speed?: number
+  isAccent?: boolean
 }
 
 const CHARSET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".split("")
 
-function SplitFlapTextInner({ text, className = "", speed = 50 }: SplitFlapTextProps) {
+function SplitFlapTextInner({ text, className = "", speed = 50, isAccent = false }: SplitFlapTextProps) {
   const chars = useMemo(() => text.split(""), [text])
   const [animationKey, setAnimationKey] = useState(0)
   const [hasInitialized, setHasInitialized] = useState(false)
@@ -160,6 +161,7 @@ function SplitFlapTextInner({ text, className = "", speed = 50 }: SplitFlapTextP
           skipEntrance={hasInitialized}
           speed={speed}
           playClick={audio?.playClick}
+          isAccent={isAccent}
         />
       ))}
     </div>
@@ -177,9 +179,10 @@ interface SplitFlapCharProps {
   skipEntrance: boolean
   speed: number
   playClick?: () => void
+  isAccent?: boolean
 }
 
-function SplitFlapChar({ char, index, animationKey, skipEntrance, speed, playClick }: SplitFlapCharProps) {
+function SplitFlapChar({ char, index, animationKey, skipEntrance, speed, playClick, isAccent = false }: SplitFlapCharProps) {
   const displayChar = CHARSET.includes(char) ? char : " "
   const isSpace = char === " "
   const [currentChar, setCurrentChar] = useState(skipEntrance ? displayChar : " ")
@@ -189,8 +192,12 @@ function SplitFlapChar({ char, index, animationKey, skipEntrance, speed, playCli
 
   const tileDelay = 0.15 * index
 
-  const bgColor = isSettled ? "hsl(0, 0%, 0%)" : "rgba(249, 115, 22, 0.2)"
-  const textColor = isSettled ? "#ffffff" : "#f97316"
+  const bgColor = isSettled 
+    ? (isAccent ? "rgba(249, 115, 22, 1)" : "hsl(0, 0%, 0%)") 
+    : "rgba(249, 115, 22, 0.2)"
+  const textColor = isSettled 
+    ? (isAccent ? "#000000" : "#ffffff") 
+    : "#f97316"
 
   useEffect(() => {
     if (intervalRef.current) clearInterval(intervalRef.current)
@@ -239,7 +246,7 @@ function SplitFlapChar({ char, index, animationKey, skipEntrance, speed, playCli
       <div
         style={{
           width: "0.3em",
-          fontSize: "clamp(4rem, 15vw, 14rem)",
+          fontSize: "var(--split-flap-size, clamp(4rem, 15vw, 14rem))",
         }}
       />
     )
@@ -252,7 +259,7 @@ function SplitFlapChar({ char, index, animationKey, skipEntrance, speed, playCli
       transition={{ delay: tileDelay, duration: 0.3, ease: "easeOut" }}
       className="relative overflow-hidden flex items-center justify-center font-[family-name:var(--font-bebas)]"
       style={{
-        fontSize: "clamp(4rem, 15vw, 14rem)",
+        fontSize: "var(--split-flap-size, clamp(4rem, 15vw, 14rem))",
         width: "0.65em",
         height: "1.05em",
         backgroundColor: bgColor,

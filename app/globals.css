@@ -136,3 +136,8 @@
   background: oklch(0.7 0.2 45);
   color: oklch(0.08 0 0);
 }
+
+/* Split-flap text size scaling */
+.text-scale-sm {
+  --split-flap-size: clamp(3rem, 12vw, 10rem);
+}

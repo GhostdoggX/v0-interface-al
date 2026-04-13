@@ -47,15 +47,16 @@ export function HeroSection() {
       {/* Main content */}
       <div ref={contentRef} className="flex-1 w-full">
         <SplitFlapAudioProvider>
-          <div className="relative">
-            <SplitFlapText text="WOLFHOUND" speed={80} />
+          <div className="relative flex flex-col">
+            <SplitFlapText text="WOLFHOUND" speed={80} className="text-scale-sm" />
+            <SplitFlapText text="TRACE" speed={80} className="text-scale-sm text-accent" isAccent />
             <div className="mt-4">
               <SplitFlapMuteToggle />
             </div>
           </div>
         </SplitFlapAudioProvider>
 
-        <h2 className="font-[var(--font-bebas)] text-muted-foreground/60 text-[clamp(1rem,3vw,2rem)] mt-4 tracking-wide">
+        <h2 className="font-[var(--font-bebas)] text-muted-foreground/60 text-[clamp(1rem,3vw,2rem)] mt-6 tracking-wide">
           Expert OSINT & Digital Intelligence
         </h2>
 
