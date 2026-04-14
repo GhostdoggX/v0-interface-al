@@ -60,7 +60,7 @@ export function AboutSection() {
       {/* Content */}
       <div ref={contentRef} className="max-w-3xl">
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-8">
-          Founded by Michael, a Senior Corporate Security Officer with nearly two decades of experience, 
+          Founded by Michael, a Corporate & Physical Security Specialist with nearly two decades of experience, 
           WolfhoundTrace Investigations operates on a singular principle: <span className="text-foreground">Integrity is non-negotiable.</span>
         </p>
 

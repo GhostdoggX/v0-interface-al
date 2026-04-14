@@ -49,7 +49,27 @@ export function HeroSection() {
         <SplitFlapAudioProvider>
           <div className="relative flex flex-col">
             <SplitFlapText text="WOLFHOUND" speed={80} className="text-scale-sm" />
-            <SplitFlapText text="TRACE" speed={80} className="text-scale-sm text-accent" isAccent />
+            <div className="relative group/logo">
+              {/* Logo positioned behind TRACE - centered between U and N of WOLFHOUND, top aligned with TRACE */}
+              <div 
+                className="absolute pointer-events-auto opacity-30 cursor-pointer transition-all duration-500 hover:opacity-60 rounded-full overflow-hidden"
+                style={{ 
+                  height: 'calc(var(--split-flap-size, clamp(4rem, 15vw, 14rem)) * 1.5)',
+                  aspectRatio: '1/1',
+                  left: 'calc(var(--split-flap-size, clamp(4rem, 15vw, 14rem)) * 0.73 * 4.5 + 70px)',
+                  top: '-10px',
+                  transform: 'translateX(-50%)'
+                }}
+              >
+                <img 
+                  src="/images/wolfhound-logo.png" 
+                  alt="" 
+                  className="w-full h-full object-contain brightness-125 transition-all duration-500 hover:brightness-150 hover:drop-shadow-[0_0_25px_rgba(192,192,192,0.6)]"
+                  aria-hidden="true"
+                />
+              </div>
+              <SplitFlapText text="TRACE" speed={80} className="text-scale-sm text-accent relative z-10" isAccent />
+            </div>
             <div className="mt-4">
               <SplitFlapMuteToggle />
             </div>
@@ -60,7 +80,11 @@ export function HeroSection() {
           Expert OSINT & Digital Intelligence
         </h2>
 
-        <p className="mt-12 max-w-md font-mono text-sm text-muted-foreground leading-relaxed">
+        <p className="mt-6 max-w-lg font-mono text-xs text-muted-foreground/80 leading-relaxed">
+          We do not simply search. We trace. Every engagement is structured to reduce noise, verify evidence, and deliver findings that can be acted on with confidence.
+        </p>
+
+        <p className="mt-8 max-w-md font-mono text-sm text-muted-foreground leading-relaxed">
           We help clients uncover, verify, and understand complex digital information with discretion, precision, and legally grounded methods.
         </p>
 
@@ -73,10 +97,11 @@ export function HeroSection() {
             <BitmapChevron className="transition-transform duration-[400ms] ease-in-out group-hover:rotate-45" />
           </a>
           <a
-            href="#colophon"
-            className="font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors duration-200"
+            href="mailto:info@enquiries.wolfhoundtrace.com?subject=Service%20initial%20consultation"
+            className="group inline-flex items-center gap-3 border border-foreground/20 px-6 py-3 font-mono text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200"
           >
-            Initiate Contact
+            <ScrambleTextOnHover text="Initiate Contact" as="span" duration={0.6} />
+            <BitmapChevron className="transition-transform duration-[400ms] ease-in-out group-hover:rotate-45" />
           </a>
         </div>
       </div>
