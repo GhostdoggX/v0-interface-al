@@ -44,16 +44,7 @@ export default function StoryPage() {
             The spirit of the Irish Wolfhound carried into the digital age.
           </p>
 
-          {/* Vigilant Wolfhound Image */}
-          <div className="mt-[10px] mb-[10px]">
-            <img 
-              src="/images/wolfhound-vigilant.jpg" 
-              alt="Vigilant wolfhound scanning for threats" 
-              className="w-48 md:w-64 h-auto opacity-80 hover:opacity-100 transition-opacity duration-500"
-            />
-          </div>
-
-          <div className="mt-6">
+          <div className="mt-16">
             <Link
               href="/"
               className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-accent transition-colors duration-200"
@@ -77,10 +68,17 @@ export default function StoryPage() {
         <article className="max-w-3xl">
           {/* The Wolfhound */}
           <section className="mb-16">
-            <h3 className="font-[var(--font-bebas)] text-3xl md:text-4xl tracking-tight mb-6">
-              THE <span className="text-accent">WOLFHOUND</span>
-            </h3>
-            <p className="font-mono text-sm text-muted-foreground leading-relaxed mb-6">
+            <div className="flex items-start gap-6">
+              <h3 className="font-[var(--font-bebas)] text-3xl md:text-4xl tracking-tight mb-6">
+                THE <span className="text-accent">WOLFHOUND</span>
+              </h3>
+              <img 
+                src="/images/wolfhound-wireframe.jpg" 
+                alt="Vigilant wolfhound" 
+                className="w-24 md:w-32 h-auto opacity-70 hover:opacity-100 transition-opacity duration-500 -mt-[10px] mix-blend-lighten"
+              />
+            </div>
+            <p className="font-mono text-sm text-muted-foreground leading-relaxed mb-6 mt-[10px]">
               The Irish Wolfhound is a creature of profound duality — possessing both quiet nobility and an unyielding drive when on the hunt. It is a creature of purpose, bred for patience, precision, and loyalty. When wolves moved unseen among the flock, it was the wolfhound who sensed the danger first.
             </p>
             <p className="font-mono text-sm text-muted-foreground leading-relaxed">
