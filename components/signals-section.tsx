@@ -7,7 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 gsap.registerPlugin(ScrollTrigger)
 
-const signals = [
+const signalsTop = [
   {
     date: "2025.06.10",
     title: "Crypto Forensics",
@@ -23,6 +23,9 @@ const signals = [
     title: "AI-Powered OSINT",
     note: "Machine learning integration for pattern recognition in large datasets.",
   },
+]
+
+const signalsBottom = [
   {
     date: "2025.04.30",
     title: "Evidence Preservation",
@@ -202,7 +205,7 @@ export function SignalsSection() {
         </div>
       </div>
 
-      {/* Horizontal scroll container */}
+      {/* Horizontal scroll container - Top row */}
       <div
         ref={(el) => {
           scrollRef.current = el
@@ -211,8 +214,15 @@ export function SignalsSection() {
         className="flex gap-8 overflow-x-auto pb-8 pr-12 scrollbar-hide"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
-        {signals.map((signal, index) => (
+        {signalsTop.map((signal, index) => (
           <SignalCard key={index} signal={signal} index={index} />
+        ))}
+      </div>
+
+      {/* Bottom row - Evidence Preservation & Social Engineering Defense */}
+      <div className="flex gap-8 mt-8 pr-6 md:pr-12">
+        {signalsBottom.map((signal, index) => (
+          <SignalCard key={index} signal={signal} index={index + 3} />
         ))}
       </div>
     </section>
