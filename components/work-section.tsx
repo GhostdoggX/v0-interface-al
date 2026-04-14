@@ -12,37 +12,31 @@ const experiments = [
     title: "Corporate Due Diligence",
     medium: "Investigation",
     description: "Comprehensive background verification for business partners, vendors, and investment targets.",
-    span: "col-span-2 row-span-2",
   },
   {
     title: "Digital Forensics",
     medium: "Analysis",
     description: "Recovery and examination of digital evidence from devices and online sources.",
-    span: "col-span-1 row-span-1",
   },
   {
     title: "Cryptocurrency Tracing",
     medium: "Blockchain",
     description: "Tracking and mapping crypto transactions across wallets and exchanges.",
-    span: "col-span-1 row-span-2",
   },
   {
     title: "Open-Source Intelligence",
     medium: "OSINT",
     description: "Systematic collection and analysis of publicly available information.",
-    span: "col-span-1 row-span-1",
   },
   {
     title: "Asset Discovery",
     medium: "Research",
     description: "Identification and verification of undisclosed assets and holdings.",
-    span: "col-span-2 row-span-1",
   },
   {
     title: "Threat Assessment",
     medium: "Security",
     description: "Evaluation of digital footprints and potential exposure risks.",
-    span: "col-span-1 row-span-1",
   },
 ]
 
@@ -171,7 +165,7 @@ export function WorkSection() {
       {/* Asymmetric grid */}
       <div
         ref={gridRef}
-        className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[160px] md:auto-rows-[180px] overflow-x-auto scrollbar-hide pb-4"
+        className="flex flex-wrap gap-4 md:gap-6 overflow-x-auto scrollbar-hide pb-4"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         onScroll={checkScrollPosition}
       >
@@ -192,7 +186,6 @@ function WorkCard({
     title: string
     medium: string
     description: string
-    span: string
   }
   index: number
   persistHover?: boolean
@@ -221,8 +214,7 @@ function WorkCard({
     <article
       ref={cardRef}
       className={cn(
-        "group relative border border-border/40 p-4 pr-[50px] flex flex-col justify-between transition-all duration-500 cursor-pointer overflow-hidden",
-        experiment.span,
+        "group relative border border-border/40 p-4 flex flex-col justify-between transition-all duration-500 cursor-pointer overflow-hidden min-h-[160px]",
         isActive && "border-accent/60",
       )}
       onMouseEnter={() => setIsHovered(true)}
