@@ -168,10 +168,10 @@ export function SignalsSection() {
       />
 
       {/* Section header */}
-      <div ref={headerRef} className="mb-16 pr-6 md:pr-12 flex items-end justify-between">
+      <div ref={headerRef} className="mb-8 md:mb-16 pr-6 md:pr-12 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
         <div>
           <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">01 / Intel</span>
-          <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">LATEST CAPABILITIES</h2>
+          <h2 className="mt-2 md:mt-4 font-[var(--font-bebas)] text-3xl sm:text-5xl md:text-7xl tracking-tight">LATEST CAPABILITIES</h2>
         </div>
         
         {/* Navigation Arrows */}
@@ -180,7 +180,7 @@ export function SignalsSection() {
             onClick={scrollLeft}
             disabled={!canScrollLeft}
             className={cn(
-              "w-12 h-12 border-2 flex items-center justify-center font-mono text-lg transition-all duration-300",
+              "w-10 h-10 sm:w-12 sm:h-12 border-2 flex items-center justify-center font-mono text-base sm:text-lg transition-all duration-300",
               canScrollLeft 
                 ? "border-[#f97316] text-[#f97316] hover:bg-[#f97316] hover:text-black cursor-pointer" 
                 : "border-border/30 text-muted-foreground/30 cursor-not-allowed"
@@ -193,7 +193,7 @@ export function SignalsSection() {
             onClick={scrollRight}
             disabled={!canScrollRight}
             className={cn(
-              "w-12 h-12 border-2 flex items-center justify-center font-mono text-lg transition-all duration-300",
+              "w-10 h-10 sm:w-12 sm:h-12 border-2 flex items-center justify-center font-mono text-base sm:text-lg transition-all duration-300",
               canScrollRight 
                 ? "border-[#f97316] text-[#f97316] hover:bg-[#f97316] hover:text-black cursor-pointer" 
                 : "border-border/30 text-muted-foreground/30 cursor-not-allowed"
@@ -220,7 +220,7 @@ export function SignalsSection() {
       </div>
 
       {/* Bottom row - Evidence Preservation & Social Engineering Defense */}
-      <div className="flex gap-8 mt-8 pr-6 md:pr-12">
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-8 pr-6 md:pr-12">
         {signalsBottom.map((signal, index) => (
           <SignalCard key={index} signal={signal} index={index + 3} />
         ))}
@@ -239,7 +239,7 @@ function SignalCard({
   return (
     <article
       className={cn(
-        "group relative flex-shrink-0 w-72",
+        "group relative flex-shrink-0 w-64 sm:w-72",
         "transition-transform duration-500 ease-out",
         "hover:-translate-y-2",
       )}

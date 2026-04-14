@@ -121,13 +121,13 @@ export function WorkSection() {
   return (
     <section ref={sectionRef} id="work" className="relative py-32 pl-6 md:pl-28 pr-6 md:pr-12">
       {/* Section header */}
-      <div ref={headerRef} className="mb-16 flex items-end justify-between">
+      <div ref={headerRef} className="mb-8 md:mb-16 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
         <div>
           <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02 / Services</span>
-          <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">CAPABILITIES</h2>
+          <h2 className="mt-2 md:mt-4 font-[var(--font-bebas)] text-3xl sm:text-5xl md:text-7xl tracking-tight">CAPABILITIES</h2>
         </div>
         <div className="flex items-end gap-[10px]">
-          <p className="hidden md:block max-w-xs font-mono text-xs text-muted-foreground text-right leading-relaxed">
+          <p className="hidden lg:block max-w-xs font-mono text-xs text-muted-foreground text-right leading-relaxed">
             From corporate due diligence to digital forensics and open-source investigations.
           </p>
           {/* Navigation Arrows */}
@@ -136,7 +136,7 @@ export function WorkSection() {
               onClick={scrollLeft}
               disabled={!canScrollLeft}
               className={cn(
-                "w-12 h-12 border-2 flex items-center justify-center font-mono text-lg transition-all duration-300",
+                "w-10 h-10 sm:w-12 sm:h-12 border-2 flex items-center justify-center font-mono text-base sm:text-lg transition-all duration-300",
                 canScrollLeft 
                   ? "border-[#f97316] text-[#f97316] hover:bg-[#f97316] hover:text-black cursor-pointer" 
                   : "border-border/30 text-muted-foreground/30 cursor-not-allowed"
@@ -149,7 +149,7 @@ export function WorkSection() {
               onClick={scrollRight}
               disabled={!canScrollRight}
               className={cn(
-                "w-12 h-12 border-2 flex items-center justify-center font-mono text-lg transition-all duration-300",
+                "w-10 h-10 sm:w-12 sm:h-12 border-2 flex items-center justify-center font-mono text-base sm:text-lg transition-all duration-300",
                 canScrollRight 
                   ? "border-[#f97316] text-[#f97316] hover:bg-[#f97316] hover:text-black cursor-pointer" 
                   : "border-border/30 text-muted-foreground/30 cursor-not-allowed"
@@ -235,7 +235,7 @@ function WorkCard({
         </span>
         <h3
           className={cn(
-            "mt-3 font-[var(--font-bebas)] text-2xl md:text-4xl tracking-tight transition-colors duration-300",
+            "mt-2 sm:mt-3 font-[var(--font-bebas)] text-xl sm:text-2xl md:text-4xl tracking-tight transition-colors duration-300",
             isActive ? "text-accent" : "text-foreground",
           )}
         >
