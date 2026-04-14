@@ -71,7 +71,7 @@ export default function StoryPage() {
             <img 
               src="/images/wolfhound-wireframe.jpg" 
               alt="Vigilant wolfhound" 
-              className="absolute right-0 top-0 w-60 md:w-80 h-auto opacity-40 hover:opacity-70 transition-opacity duration-500 -mt-[210px] mix-blend-screen pointer-events-none -z-10"
+              className="absolute right-[200px] top-0 w-60 md:w-80 h-auto opacity-40 hover:opacity-70 transition-opacity duration-500 -mt-[210px] mix-blend-screen pointer-events-none -z-10"
               style={{ 
                 maskImage: 'radial-gradient(ellipse 80% 80% at center, black 40%, transparent 70%)',
                 WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at center, black 40%, transparent 70%)'
