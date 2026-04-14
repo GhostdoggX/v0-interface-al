@@ -64,7 +64,7 @@ export function HeroSection() {
                 <img 
                   src="/images/wolfhound-logo.png" 
                   alt="" 
-                  className="w-full h-full object-contain grayscale"
+                  className="w-full h-full object-contain"
                   aria-hidden="true"
                 />
               </div>
