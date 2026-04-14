@@ -42,6 +42,37 @@ export function SignalsSection() {
   const cardsRef = useRef<HTMLDivElement>(null)
   const cursorRef = useRef<HTMLDivElement>(null)
   const [isHovering, setIsHovering] = useState(false)
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(true)
+
+  const checkScrollPosition = () => {
+    if (!scrollRef.current) return
+    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current
+    setCanScrollLeft(scrollLeft > 0)
+    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10)
+  }
+
+  const scrollLeft = () => {
+    if (!scrollRef.current) return
+    scrollRef.current.scrollBy({ left: -300, behavior: 'smooth' })
+  }
+
+  const scrollRight = () => {
+    if (!scrollRef.current) return
+    scrollRef.current.scrollBy({ left: 300, behavior: 'smooth' })
+  }
+
+  useEffect(() => {
+    const container = scrollRef.current
+    if (!container) return
+    checkScrollPosition()
+    container.addEventListener('scroll', checkScrollPosition)
+    window.addEventListener('resize', checkScrollPosition)
+    return () => {
+      container.removeEventListener('scroll', checkScrollPosition)
+      window.removeEventListener('resize', checkScrollPosition)
+    }
+  }, [])
 
   useEffect(() => {
     if (!sectionRef.current || !cursorRef.current) return
@@ -134,9 +165,41 @@ export function SignalsSection() {
       />
 
       {/* Section header */}
-      <div ref={headerRef} className="mb-16 pr-6 md:pr-12">
-        <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">01 / Intel</span>
-        <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">LATEST CAPABILITIES</h2>
+      <div ref={headerRef} className="mb-16 pr-6 md:pr-12 flex items-end justify-between">
+        <div>
+          <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">01 / Intel</span>
+          <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">LATEST CAPABILITIES</h2>
+        </div>
+        
+        {/* Navigation Arrows */}
+        <div className="flex gap-2">
+          <button
+            onClick={scrollLeft}
+            disabled={!canScrollLeft}
+            className={cn(
+              "w-12 h-12 border-2 flex items-center justify-center font-mono text-lg transition-all duration-300",
+              canScrollLeft 
+                ? "border-[#f97316] text-[#f97316] hover:bg-[#f97316] hover:text-black cursor-pointer" 
+                : "border-border/30 text-muted-foreground/30 cursor-not-allowed"
+            )}
+            aria-label="Scroll left"
+          >
+            ←
+          </button>
+          <button
+            onClick={scrollRight}
+            disabled={!canScrollRight}
+            className={cn(
+              "w-12 h-12 border-2 flex items-center justify-center font-mono text-lg transition-all duration-300",
+              canScrollRight 
+                ? "border-[#f97316] text-[#f97316] hover:bg-[#f97316] hover:text-black cursor-pointer" 
+                : "border-border/30 text-muted-foreground/30 cursor-not-allowed"
+            )}
+            aria-label="Scroll right"
+          >
+            →
+          </button>
+        </div>
       </div>
 
       {/* Horizontal scroll container */}
