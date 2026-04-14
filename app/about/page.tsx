@@ -5,7 +5,7 @@ import { AnimatedNoise } from "@/components/animated-noise"
 
 export const metadata: Metadata = {
   title: "About Us | Wolfhound Trace",
-  description: "Learn about WolfhoundTrace Investigations, founded by Michael, a Senior Corporate Security Officer with nearly two decades of experience.",
+  description: "Learn about WolfhoundTrace Investigations, founded by Michael, a Corporate & Physical Security Specialist with nearly two decades of experience.",
 }
 
 export default function AboutPage() {
@@ -82,7 +82,7 @@ export default function AboutPage() {
               At WolfhoundTrace, we believe that true security isn&apos;t just about locks and firewalls—it&apos;s about the relentless pursuit of factual truth.
             </p>
             <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed">
-              As a Senior Corporate Security Officer with nearly two decades of experience blending physical defense with cyber innovation, I founded this platform on a singular principle: <span className="text-foreground font-medium">Integrity is non-negotiable.</span>
+              As a Corporate & Physical Security Specialist with nearly two decades of experience blending physical defense with cyber innovation, I founded this platform on a singular principle: <span className="text-foreground font-medium">Integrity is non-negotiable.</span>
             </p>
           </section>
 
