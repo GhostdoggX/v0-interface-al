@@ -67,16 +67,20 @@ export default function StoryPage() {
       <div className="relative z-10 px-6 md:pl-28 md:pr-12 py-16 md:py-24 -mt-[70px]">
         <article className="max-w-3xl">
           {/* The Wolfhound */}
-          <section className="mb-16">
+          <section className="mb-16 relative">
+            <img 
+              src="/images/wolfhound-wireframe.jpg" 
+              alt="Vigilant wolfhound" 
+              className="absolute right-0 top-0 w-60 md:w-80 h-auto opacity-40 hover:opacity-70 transition-opacity duration-500 -mt-[210px] mix-blend-screen pointer-events-none -z-10"
+              style={{ 
+                maskImage: 'radial-gradient(ellipse 80% 80% at center, black 40%, transparent 70%)',
+                WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at center, black 40%, transparent 70%)'
+              }}
+            />
             <div className="flex items-start gap-6">
               <h3 className="font-[var(--font-bebas)] text-3xl md:text-4xl tracking-tight mb-6">
                 THE <span className="text-accent">WOLFHOUND</span>
               </h3>
-              <img 
-                src="/images/wolfhound-wireframe.jpg" 
-                alt="Vigilant wolfhound" 
-                className="w-60 md:w-80 h-auto opacity-70 hover:opacity-100 transition-opacity duration-500 -mt-[210px] mix-blend-lighten"
-              />
             </div>
             <p className="font-mono text-sm text-muted-foreground leading-relaxed mb-6 mt-[10px]">
               The Irish Wolfhound is a creature of profound duality — possessing both quiet nobility and an unyielding drive when on the hunt. It is a creature of purpose, bred for patience, precision, and loyalty. When wolves moved unseen among the flock, it was the wolfhound who sensed the danger first.
