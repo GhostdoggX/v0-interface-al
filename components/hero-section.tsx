@@ -52,7 +52,7 @@ export function HeroSection() {
             <div className="relative group/logo">
               {/* Logo positioned behind TRACE - centered between U and N of WOLFHOUND, top aligned with TRACE */}
               <div 
-                className="absolute pointer-events-auto opacity-30 cursor-pointer transition-all duration-500 hover:opacity-60"
+                className="absolute pointer-events-auto opacity-30 cursor-pointer transition-all duration-500 hover:opacity-60 rounded-full overflow-hidden"
                 style={{ 
                   height: 'calc(var(--split-flap-size, clamp(4rem, 15vw, 14rem)) * 1.5)',
                   aspectRatio: '1/1',
