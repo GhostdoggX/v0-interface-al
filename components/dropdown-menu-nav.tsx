@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import { cn } from "@/lib/utils"
 
 const navItems = [
+  { id: "hero", label: "Home", number: "00" },
   { id: "signals", label: "Intel", number: "01" },
   { id: "work", label: "Services", number: "02" },
   { id: "principles", label: "Approach", number: "03" },
