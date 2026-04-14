@@ -74,7 +74,8 @@ export default function StoryPage() {
               className="absolute right-[200px] top-0 w-60 md:w-80 h-auto opacity-40 hover:opacity-70 transition-opacity duration-500 -mt-[210px] mix-blend-screen pointer-events-none -z-10"
               style={{ 
                 maskImage: 'radial-gradient(ellipse 80% 80% at center, black 40%, transparent 70%)',
-                WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at center, black 40%, transparent 70%)'
+                WebkitMaskImage: 'radial-gradient(ellipse 80% 80% at center, black 40%, transparent 70%)',
+                filter: 'drop-shadow(0 0 15px rgba(192,192,192,0.4))'
               }}
             />
             <div className="flex items-start gap-6">
@@ -82,10 +83,10 @@ export default function StoryPage() {
                 THE <span className="text-accent">WOLFHOUND</span>
               </h3>
             </div>
-            <p className="font-mono text-sm text-muted-foreground leading-relaxed mb-6 mt-[10px]">
+            <p className="font-mono text-sm leading-relaxed mb-6 mt-[10px]" style={{ color: 'rgb(192,192,192)' }}>
               The Irish Wolfhound is a creature of profound duality — possessing both quiet nobility and an unyielding drive when on the hunt. It is a creature of purpose, bred for patience, precision, and loyalty. When wolves moved unseen among the flock, it was the wolfhound who sensed the danger first.
             </p>
-            <p className="font-mono text-sm text-muted-foreground leading-relaxed">
+            <p className="font-mono text-sm leading-relaxed" style={{ color: 'rgb(192,192,192)' }}>
               With an instinct honed over centuries, the wolfhound could identify the wolf hiding in sheep&apos;s clothing — the predator disguised among the innocent, waiting for its moment to strike. This innate ability to see through deception and detect danger where others saw only the ordinary made the wolfhound invaluable. <span className="text-foreground font-medium">Silent, steady, and relentless,</span> it tracked every trace until the truth revealed itself.
             </p>
           </section>
@@ -95,10 +96,10 @@ export default function StoryPage() {
             <h3 className="font-[var(--font-bebas)] text-3xl md:text-4xl tracking-tight mb-6">
               OUR <span className="text-accent">MISSION</span>
             </h3>
-            <p className="font-mono text-sm text-muted-foreground leading-relaxed mb-6">
+            <p className="font-mono text-sm leading-relaxed mb-6" style={{ color: 'rgb(192,192,192)' }}>
               At Wolfhound Trace, we carry that same spirit into the digital world. Our mission is to uncover the hidden — the wolves in sheep&apos;s clothing moving quietly through networks, data trails, and online shadows. Like our namesake, we operate with focus, discipline, and integrity.
             </p>
-            <p className="font-mono text-sm text-muted-foreground leading-relaxed">
+            <p className="font-mono text-sm leading-relaxed" style={{ color: 'rgb(192,192,192)' }}>
               Every investigation we undertake — whether corporate, digital, or financial — receives the same level of dedication. We treat each client with equal importance and discretion, ensuring absolute confidentiality and pursuing every lead until fully verified.
             </p>
           </section>
@@ -108,10 +109,10 @@ export default function StoryPage() {
             <h3 className="font-[var(--font-bebas)] text-3xl md:text-4xl tracking-tight mb-6">
               OUR <span className="text-accent">PHILOSOPHY</span>
             </h3>
-            <p className="font-mono text-sm text-muted-foreground leading-relaxed mb-6">
+            <p className="font-mono text-sm leading-relaxed mb-6" style={{ color: 'rgb(192,192,192)' }}>
               Our philosophy values accuracy over haste. Just as a wolfhound never loses the scent, we do not stop until every digital trace aligns with the truth. This isn&apos;t just our work — it&apos;s our instinct.
             </p>
-            <p className="font-mono text-sm text-muted-foreground leading-relaxed">
+            <p className="font-mono text-sm leading-relaxed" style={{ color: 'rgb(192,192,192)' }}>
               In the complex world of open-source intelligence (OSINT) and digital forensics, true results require silent precision, keen observation, and the patience to track digital footprints across the globe without alerting the target.
             </p>
           </section>
@@ -121,7 +122,7 @@ export default function StoryPage() {
             <h3 className="font-[var(--font-bebas)] text-3xl md:text-4xl tracking-tight mb-6">
               OUR <span className="text-accent">COMMITMENT</span>
             </h3>
-            <p className="font-mono text-sm text-muted-foreground leading-relaxed mb-6">
+            <p className="font-mono text-sm leading-relaxed mb-6" style={{ color: 'rgb(192,192,192)' }}>
               Like the hounds of old, our investigators are trained to see what others miss. We operate with unwavering loyalty to our clients&apos; privacy and a fierce commitment to uncovering the truth — no matter how deeply it is buried beneath layers of corporate obfuscation or digital anonymity.
             </p>
             <p className="font-mono text-sm text-foreground font-medium leading-relaxed text-lg">
@@ -134,7 +135,7 @@ export default function StoryPage() {
 
           {/* Contact CTA */}
           <section>
-            <p className="font-mono text-sm text-muted-foreground mb-6">
+            <p className="font-mono text-sm mb-6" style={{ color: 'rgb(192,192,192)' }}>
               Ready to discuss your investigation needs?
             </p>
             <a
