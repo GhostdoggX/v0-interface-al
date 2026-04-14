@@ -44,7 +44,16 @@ export default function StoryPage() {
             The spirit of the Irish Wolfhound carried into the digital age.
           </p>
 
-          <div className="mt-16">
+          {/* Vigilant Wolfhound Image */}
+          <div className="mt-[10px] mb-[10px]">
+            <img 
+              src="/images/wolfhound-vigilant.jpg" 
+              alt="Vigilant wolfhound scanning for threats" 
+              className="w-48 md:w-64 h-auto opacity-80 hover:opacity-100 transition-opacity duration-500"
+            />
+          </div>
+
+          <div className="mt-6">
             <Link
               href="/"
               className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-accent transition-colors duration-200"
