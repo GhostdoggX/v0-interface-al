@@ -132,7 +132,7 @@ export function WorkSection() {
           <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02 / Services</span>
           <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">CAPABILITIES</h2>
         </div>
-        <div className="flex items-end gap-6">
+        <div className="flex items-end gap-[10px]">
           <p className="hidden md:block max-w-xs font-mono text-xs text-muted-foreground text-right leading-relaxed">
             From corporate due diligence to digital forensics and open-source investigations.
           </p>
