@@ -50,12 +50,15 @@ export function HeroSection() {
           <div className="relative flex flex-col">
             <SplitFlapText text="WOLFHOUND" speed={80} className="text-scale-sm" />
             <div className="relative">
-              {/* Logo positioned behind TRACE */}
+              {/* Logo positioned behind TRACE - centered between U and N of WOLFHOUND, top aligned with TRACE */}
               <div 
-                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-20"
+                className="absolute pointer-events-none opacity-20"
                 style={{ 
                   height: 'calc(var(--split-flap-size, clamp(4rem, 15vw, 14rem)) * 1.5)',
-                  aspectRatio: '1/1'
+                  aspectRatio: '1/1',
+                  left: 'calc(var(--split-flap-size, clamp(4rem, 15vw, 14rem)) * 0.73 * 4.5)',
+                  top: '0',
+                  transform: 'translateX(-50%)'
                 }}
               >
                 <img 
