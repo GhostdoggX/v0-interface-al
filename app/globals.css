@@ -141,3 +141,13 @@
 .text-scale-sm {
   --split-flap-size: clamp(3rem, 12vw, 10rem);
 }
+
+/* Pulse glow animation for menu button */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(249, 115, 22, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(249, 115, 22, 0.6);
+  }
+}
