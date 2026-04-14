@@ -124,6 +124,16 @@ export default function AboutPage() {
               Initiate Contact
               <span className="transition-transform duration-300 hover:translate-x-1">→</span>
             </a>
+            
+            <div className="mt-8">
+              <Link
+                href="/"
+                className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-accent transition-colors duration-200"
+              >
+                <span className="rotate-180">→</span>
+                Back to Home
+              </Link>
+            </div>
           </section>
         </article>
 
