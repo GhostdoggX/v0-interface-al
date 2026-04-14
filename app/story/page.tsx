@@ -64,7 +64,7 @@ export default function StoryPage() {
       </header>
 
       {/* Content Section */}
-      <div className="relative z-10 px-6 md:pl-28 md:pr-12 py-16 md:py-24">
+      <div className="relative z-10 px-6 md:pl-28 md:pr-12 py-16 md:py-24 -mt-[70px]">
         <article className="max-w-3xl">
           {/* The Wolfhound */}
           <section className="mb-16">
