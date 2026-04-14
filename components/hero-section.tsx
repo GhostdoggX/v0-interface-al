@@ -80,7 +80,11 @@ export function HeroSection() {
           Expert OSINT & Digital Intelligence
         </h2>
 
-        <p className="mt-12 max-w-md font-mono text-sm text-muted-foreground leading-relaxed">
+        <p className="mt-6 max-w-lg font-mono text-xs text-muted-foreground/80 leading-relaxed">
+          We do not simply search. We trace. Every engagement is structured to reduce noise, verify evidence, and deliver findings that can be acted on with confidence.
+        </p>
+
+        <p className="mt-8 max-w-md font-mono text-sm text-muted-foreground leading-relaxed">
           We help clients uncover, verify, and understand complex digital information with discretion, precision, and legally grounded methods.
         </p>
 
