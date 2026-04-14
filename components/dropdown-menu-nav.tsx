@@ -62,13 +62,14 @@ export function DropdownMenuNav() {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          "flex items-center gap-4 border px-8 py-4 font-mono text-xs uppercase tracking-widest transition-all duration-300 animate-pulse-glow",
+          "flex items-center gap-4 border-2 px-8 py-4 font-mono text-xs uppercase tracking-widest transition-all duration-300",
           isOpen 
-            ? "border-accent text-accent bg-background shadow-[0_0_20px_rgba(249,115,22,0.5)]" 
-            : "border-accent/60 text-foreground hover:border-accent hover:text-accent bg-background/90 backdrop-blur-sm shadow-[0_0_15px_rgba(249,115,22,0.3)]"
+            ? "border-[#f97316] text-[#f97316] bg-[#0a0a0a]" 
+            : "border-[#f97316] text-white hover:text-[#f97316] bg-[#0a0a0a]"
         )}
         style={{
-          animation: isOpen ? 'none' : 'pulseGlow 2s ease-in-out infinite'
+          animation: isOpen ? 'none' : 'pulseGlow 2s ease-in-out infinite',
+          boxShadow: '0 0 20px rgba(249, 115, 22, 0.5)'
         }}
       >
         <span>Menu</span>
