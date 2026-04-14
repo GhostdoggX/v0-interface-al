@@ -75,7 +75,7 @@ export default function StoryPage() {
               <img 
                 src="/images/wolfhound-wireframe.jpg" 
                 alt="Vigilant wolfhound" 
-                className="w-24 md:w-32 h-auto opacity-70 hover:opacity-100 transition-opacity duration-500 -mt-[10px] mix-blend-lighten"
+                className="w-60 md:w-80 h-auto opacity-70 hover:opacity-100 transition-opacity duration-500 -mt-[10px] mix-blend-lighten"
               />
             </div>
             <p className="font-mono text-sm text-muted-foreground leading-relaxed mb-6 mt-[10px]">
