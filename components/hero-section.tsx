@@ -57,7 +57,7 @@ export function HeroSection() {
                   height: 'calc(var(--split-flap-size, clamp(4rem, 15vw, 14rem)) * 1.5)',
                   aspectRatio: '1/1',
                   left: 'calc(var(--split-flap-size, clamp(4rem, 15vw, 14rem)) * 0.73 * 4.5 + 70px)',
-                  top: '-20px',
+                  top: '-10px',
                   transform: 'translateX(-50%)'
                 }}
               >
