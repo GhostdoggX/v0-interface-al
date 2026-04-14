@@ -9,6 +9,7 @@ const navItems = [
   { id: "work", label: "Services" },
   { id: "principles", label: "Approach" },
   { id: "about", label: "About" },
+  { id: "story", label: "Story" },
   { id: "colophon", label: "Contact" },
 ]
 
