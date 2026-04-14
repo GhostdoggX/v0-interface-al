@@ -57,7 +57,7 @@ export function DropdownMenuNav() {
   }
 
   return (
-    <div ref={menuRef} className="fixed top-6 right-6 md:top-8 md:right-8 z-50">
+    <div ref={menuRef} className="fixed top-6 right-6 md:top-8 md:right-8 z-[100]">
       {/* Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
