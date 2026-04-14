@@ -135,8 +135,12 @@ export function ColophonSection() {
           <ul className="space-y-2">
             <li>
               <a
-                href="mailto:contact@wolfhoundtrace.com"
+                href="mailto:wolfhound_trace@pm.me"
                 className="font-mono text-xs text-foreground/80 hover:text-accent transition-colors duration-200"
+                style={{ 
+                  textShadow: '0 0 8px rgba(249, 115, 22, 0.5)',
+                  animation: 'pulseGlow 2s ease-in-out infinite'
+                }}
               >
                 Secure Email
               </a>
@@ -153,6 +157,10 @@ export function ColophonSection() {
               <a
                 href="/privacy"
                 className="font-mono text-xs text-foreground/80 hover:text-accent transition-colors duration-200"
+                style={{ 
+                  textShadow: '0 0 8px rgba(249, 115, 22, 0.5)',
+                  animation: 'pulseGlow 2s ease-in-out infinite'
+                }}
               >
                 Privacy
               </a>

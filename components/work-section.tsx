@@ -12,37 +12,31 @@ const experiments = [
     title: "Corporate Due Diligence",
     medium: "Investigation",
     description: "Comprehensive background verification for business partners, vendors, and investment targets.",
-    span: "col-span-2 row-span-2",
   },
   {
     title: "Digital Forensics",
     medium: "Analysis",
     description: "Recovery and examination of digital evidence from devices and online sources.",
-    span: "col-span-1 row-span-1",
   },
   {
     title: "Cryptocurrency Tracing",
     medium: "Blockchain",
     description: "Tracking and mapping crypto transactions across wallets and exchanges.",
-    span: "col-span-1 row-span-2",
   },
   {
     title: "Open-Source Intelligence",
     medium: "OSINT",
     description: "Systematic collection and analysis of publicly available information.",
-    span: "col-span-1 row-span-1",
   },
   {
     title: "Asset Discovery",
     medium: "Research",
     description: "Identification and verification of undisclosed assets and holdings.",
-    span: "col-span-2 row-span-1",
   },
   {
     title: "Threat Assessment",
     medium: "Security",
     description: "Evaluation of digital footprints and potential exposure risks.",
-    span: "col-span-1 row-span-1",
   },
 ]
 
@@ -50,6 +44,37 @@ export function WorkSection() {
   const sectionRef = useRef<HTMLElement>(null)
   const headerRef = useRef<HTMLDivElement>(null)
   const gridRef = useRef<HTMLDivElement>(null)
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(true)
+
+  const checkScrollPosition = () => {
+    if (!gridRef.current) return
+    const { scrollLeft, scrollWidth, clientWidth } = gridRef.current
+    setCanScrollLeft(scrollLeft > 0)
+    setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10)
+  }
+
+  const scrollLeft = () => {
+    if (!gridRef.current) return
+    gridRef.current.scrollBy({ left: -350, behavior: 'smooth' })
+  }
+
+  const scrollRight = () => {
+    if (!gridRef.current) return
+    gridRef.current.scrollBy({ left: 350, behavior: 'smooth' })
+  }
+
+  useEffect(() => {
+    const container = gridRef.current
+    if (!container) return
+    checkScrollPosition()
+    container.addEventListener('scroll', checkScrollPosition)
+    window.addEventListener('resize', checkScrollPosition)
+    return () => {
+      container.removeEventListener('scroll', checkScrollPosition)
+      window.removeEventListener('resize', checkScrollPosition)
+    }
+  }, [])
 
   useEffect(() => {
     if (!sectionRef.current || !headerRef.current || !gridRef.current) return
@@ -101,15 +126,48 @@ export function WorkSection() {
           <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02 / Services</span>
           <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">CAPABILITIES</h2>
         </div>
-        <p className="hidden md:block max-w-xs font-mono text-xs text-muted-foreground text-right leading-relaxed">
-          From corporate due diligence to digital forensics and open-source investigations.
-        </p>
+        <div className="flex items-end gap-[10px]">
+          <p className="hidden md:block max-w-xs font-mono text-xs text-muted-foreground text-right leading-relaxed">
+            From corporate due diligence to digital forensics and open-source investigations.
+          </p>
+          {/* Navigation Arrows */}
+          <div className="flex gap-2">
+            <button
+              onClick={scrollLeft}
+              disabled={!canScrollLeft}
+              className={cn(
+                "w-12 h-12 border-2 flex items-center justify-center font-mono text-lg transition-all duration-300",
+                canScrollLeft 
+                  ? "border-[#f97316] text-[#f97316] hover:bg-[#f97316] hover:text-black cursor-pointer" 
+                  : "border-border/30 text-muted-foreground/30 cursor-not-allowed"
+              )}
+              aria-label="Scroll left"
+            >
+              ←
+            </button>
+            <button
+              onClick={scrollRight}
+              disabled={!canScrollRight}
+              className={cn(
+                "w-12 h-12 border-2 flex items-center justify-center font-mono text-lg transition-all duration-300",
+                canScrollRight 
+                  ? "border-[#f97316] text-[#f97316] hover:bg-[#f97316] hover:text-black cursor-pointer" 
+                  : "border-border/30 text-muted-foreground/30 cursor-not-allowed"
+              )}
+              aria-label="Scroll right"
+            >
+              →
+            </button>
+          </div>
+        </div>
       </div>
 
       {/* Asymmetric grid */}
       <div
         ref={gridRef}
-        className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[160px] md:auto-rows-[180px]"
+        className="flex flex-wrap gap-4 md:gap-6 overflow-x-auto scrollbar-hide pb-4"
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+        onScroll={checkScrollPosition}
       >
         {experiments.map((experiment, index) => (
           <WorkCard key={index} experiment={experiment} index={index} persistHover={index === 0} />
@@ -128,7 +186,6 @@ function WorkCard({
     title: string
     medium: string
     description: string
-    span: string
   }
   index: number
   persistHover?: boolean
@@ -157,8 +214,7 @@ function WorkCard({
     <article
       ref={cardRef}
       className={cn(
-        "group relative border border-border/40 p-5 flex flex-col justify-between transition-all duration-500 cursor-pointer overflow-hidden",
-        experiment.span,
+        "group relative border border-border/40 p-4 flex flex-col justify-between transition-all duration-500 cursor-pointer overflow-hidden min-h-[160px]",
         isActive && "border-accent/60",
       )}
       onMouseEnter={() => setIsHovered(true)}
