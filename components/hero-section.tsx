@@ -49,7 +49,24 @@ export function HeroSection() {
         <SplitFlapAudioProvider>
           <div className="relative flex flex-col">
             <SplitFlapText text="WOLFHOUND" speed={80} className="text-scale-sm" />
-            <SplitFlapText text="TRACE" speed={80} className="text-scale-sm text-accent" isAccent />
+            <div className="relative">
+              {/* Logo positioned behind TRACE */}
+              <div 
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none opacity-20"
+                style={{ 
+                  height: 'calc(var(--split-flap-size, clamp(4rem, 15vw, 14rem)) * 1.5)',
+                  aspectRatio: '1/1'
+                }}
+              >
+                <img 
+                  src="/images/wolfhound-logo.png" 
+                  alt="" 
+                  className="w-full h-full object-contain grayscale"
+                  aria-hidden="true"
+                />
+              </div>
+              <SplitFlapText text="TRACE" speed={80} className="text-scale-sm text-accent relative z-10" isAccent />
+            </div>
             <div className="mt-4">
               <SplitFlapMuteToggle />
             </div>
