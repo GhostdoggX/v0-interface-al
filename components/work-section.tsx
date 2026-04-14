@@ -221,7 +221,7 @@ function WorkCard({
     <article
       ref={cardRef}
       className={cn(
-        "group relative border border-border/40 p-5 flex flex-col justify-between transition-all duration-500 cursor-pointer overflow-hidden",
+        "group relative border border-border/40 p-4 pr-[50px] flex flex-col justify-between transition-all duration-500 cursor-pointer overflow-hidden",
         experiment.span,
         isActive && "border-accent/60",
       )}
