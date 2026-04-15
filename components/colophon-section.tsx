@@ -97,6 +97,7 @@ export function ColophonSection() {
           <ul className="space-y-2">
             <li className="font-mono text-xs text-foreground/80">OSINT</li>
             <li className="font-mono text-xs text-foreground/80">Digital Forensics</li>
+            <li className="font-mono text-xs text-foreground/80">Executive Protection</li>
           </ul>
         </div>
 
