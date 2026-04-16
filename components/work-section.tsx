@@ -44,7 +44,7 @@ const experiments = [
     description: "Professional tracing and location services for missing individuals with discretion and care.",
   },
   {
-    title: "Search for Missing Assets",
+    title: "Physical Asset Location",
     medium: "Recovery",
     description: "Identification and tracking of concealed or misappropriated assets across jurisdictions.",
   },
