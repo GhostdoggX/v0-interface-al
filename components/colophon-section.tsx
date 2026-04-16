@@ -92,8 +92,8 @@ export function ColophonSection() {
       {/* Multi-column layout */}
       <div ref={gridRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
         {/* Services */}
-        <div className="col-span-1 border border-[#f97316] p-4">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-accent mb-4">Services</h4>
+        <div className="col-span-1">
+          <h4 className="inline-block border border-[#f97316] px-3 py-1 font-mono text-[9px] uppercase tracking-[0.3em] text-accent mb-4">Services</h4>
           <ul className="space-y-2">
             <li className="font-mono text-xs text-foreground/80">OSINT</li>
             <li className="font-mono text-xs text-foreground/80">Search for Missing Person</li>
@@ -107,8 +107,8 @@ export function ColophonSection() {
         </div>
 
         {/* Clients */}
-        <div className="col-span-1 border border-[#f97316] p-4">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-accent mb-4">Clients</h4>
+        <div className="col-span-1">
+          <h4 className="inline-block border border-[#f97316] px-3 py-1 font-mono text-[9px] uppercase tracking-[0.3em] text-accent mb-4">Clients</h4>
           <ul className="space-y-2">
             <li className="font-mono text-xs text-foreground/80">Non Profit</li>
             <li className="font-mono text-xs text-foreground/80">Private Enquiries</li>
@@ -119,8 +119,8 @@ export function ColophonSection() {
         </div>
 
         {/* Coverage */}
-        <div className="col-span-1 border border-[#f97316] p-4">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-accent mb-4">Coverage</h4>
+        <div className="col-span-1">
+          <h4 className="inline-block border border-[#f97316] px-3 py-1 font-mono text-[9px] uppercase tracking-[0.3em] text-accent mb-4">Coverage</h4>
           <ul className="space-y-2">
             <li className="font-mono text-xs text-foreground/80">Global</li>
             <li className="font-mono text-xs text-foreground/80">Confidential</li>
@@ -128,8 +128,8 @@ export function ColophonSection() {
         </div>
 
         {/* Contact */}
-        <div className="col-span-1 border border-[#f97316] p-4">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-accent mb-4">Contact</h4>
+        <div className="col-span-1">
+          <h4 className="inline-block border border-[#f97316] px-3 py-1 font-mono text-[9px] uppercase tracking-[0.3em] text-accent mb-4">Contact</h4>
           <ul className="space-y-2">
             <li>
               <a
@@ -167,8 +167,8 @@ export function ColophonSection() {
         </div>
 
         {/* Security */}
-        <div className="col-span-1 border border-[#f97316] p-4">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-accent mb-4">Security</h4>
+        <div className="col-span-1">
+          <h4 className="inline-block border border-[#f97316] px-3 py-1 font-mono text-[9px] uppercase tracking-[0.3em] text-accent mb-4">Security</h4>
           <ul className="space-y-2">
             <li className="font-mono text-xs text-foreground/80">Encrypted</li>
             <li className="font-mono text-xs text-foreground/80">Confidential</li>
