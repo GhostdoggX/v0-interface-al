@@ -96,6 +96,8 @@ export function ColophonSection() {
           <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Services</h4>
           <ul className="space-y-2">
             <li className="font-mono text-xs text-foreground/80">OSINT</li>
+            <li className="font-mono text-xs text-foreground/80">Search for Missing Person</li>
+            <li className="font-mono text-xs text-foreground/80">Search for Missing Assets</li>
             <li className="font-mono text-xs text-foreground/80">Digital Forensics</li>
             <li className="font-mono text-xs text-foreground/80">Executive Protection</li>
           </ul>
@@ -115,6 +117,8 @@ export function ColophonSection() {
         <div className="col-span-1">
           <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Clients</h4>
           <ul className="space-y-2">
+            <li className="font-mono text-xs text-foreground/80">Non Profit</li>
+            <li className="font-mono text-xs text-foreground/80">Private Enquiries</li>
             <li className="font-mono text-xs text-foreground/80">Law Firms</li>
             <li className="font-mono text-xs text-foreground/80">Corporations</li>
             <li className="font-mono text-xs text-foreground/80">Private Equity</li>
