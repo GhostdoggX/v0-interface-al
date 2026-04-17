@@ -21,7 +21,7 @@ const signalsTop = [
   {
     date: "2025.05.15",
     title: "AI-Powered OSINT",
-    note: "Machine learning integration for pattern recognition in large datasets and behavioural pattern recognition.",
+    note: "Machine learning integration for pattern recognition in large datasets.",
   },
 ]
 
