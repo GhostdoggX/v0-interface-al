@@ -215,18 +215,19 @@ function WorkCard({
   const [isScrollActive, setIsScrollActive] = useState(false)
 
   useEffect(() => {
-    if (!persistHover || !cardRef.current) return
+    if (!cardRef.current) return
 
     const ctx = gsap.context(() => {
       ScrollTrigger.create({
         trigger: cardRef.current,
-        start: "top 80%",
+        start: "top 85%",
         onEnter: () => setIsScrollActive(true),
+        onLeaveBack: () => setIsScrollActive(false),
       })
     }, cardRef)
 
     return () => ctx.revert()
-  }, [persistHover])
+  }, [])
 
   const isActive = isHovered || isScrollActive
 

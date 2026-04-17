@@ -241,16 +241,43 @@ function SignalCard({
   signal: { date: string; title: string; note: string }
   index: number
 }) {
+  const cardRef = useRef<HTMLElement>(null)
+  const [isScrollActive, setIsScrollActive] = useState(false)
+  const [isHovered, setIsHovered] = useState(false)
+
+  useEffect(() => {
+    if (!cardRef.current) return
+
+    const ctx = gsap.context(() => {
+      ScrollTrigger.create({
+        trigger: cardRef.current,
+        start: "top 85%",
+        onEnter: () => setIsScrollActive(true),
+        onLeaveBack: () => setIsScrollActive(false),
+      })
+    }, cardRef)
+
+    return () => ctx.revert()
+  }, [])
+
+  const isActive = isHovered || isScrollActive
+
   return (
     <article
+      ref={cardRef}
       className={cn(
         "group relative flex-shrink-0 w-64 sm:w-72",
         "transition-transform duration-500 ease-out",
-        "hover:-translate-y-2",
+        isActive && "-translate-y-2",
       )}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       {/* Card with paper texture effect */}
-      <div className="relative bg-card border border-border/50 md:border-t md:border-l md:border-r-0 md:border-b-0 p-6">
+      <div className={cn(
+        "relative bg-card border border-border/50 md:border-t md:border-l md:border-r-0 md:border-b-0 p-6 transition-all duration-300",
+        isActive && "border-accent/50"
+      )}>
         {/* Top torn edge effect */}
         <div className="absolute -top-px left-0 right-0 h-px bg-gradient-to-r from-transparent via-border/40 to-transparent" />
 
@@ -263,12 +290,18 @@ function SignalCard({
         </div>
 
         {/* Title */}
-        <h3 className="font-[var(--font-bebas)] text-3xl tracking-tight mb-3 group-hover:text-accent transition-colors duration-300">
+        <h3 className={cn(
+          "font-[var(--font-bebas)] text-3xl tracking-tight mb-3 transition-colors duration-300",
+          isActive && "text-accent"
+        )}>
           {signal.title}
         </h3>
 
         {/* Divider line */}
-        <div className="w-12 h-px bg-accent/60 mb-4 group-hover:w-full transition-all duration-500" />
+        <div className={cn(
+          "h-px bg-accent/60 mb-4 transition-all duration-500",
+          isActive ? "w-full" : "w-12"
+        )} />
 
         {/* Description */}
         <p className="font-mono text-xs text-muted-foreground leading-relaxed">{signal.note}</p>
@@ -280,7 +313,10 @@ function SignalCard({
       </div>
 
       {/* Shadow/depth layer */}
-      <div className="absolute inset-0 -z-10 translate-x-1 translate-y-1 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className={cn(
+        "absolute inset-0 -z-10 translate-x-1 translate-y-1 bg-accent/5 transition-opacity duration-300",
+        isActive ? "opacity-100" : "opacity-0"
+      )} />
     </article>
   )
 }
