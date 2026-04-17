@@ -36,6 +36,11 @@ const signalsBottom = [
     title: "Social Engineering Defense",
     note: "Vulnerability assessments for corporate information security.",
   },
+  {
+    date: "2025.03.25",
+    title: "Diverse Human Analysis and Reasoning",
+    note: "Multi-perspective expert evaluation combining varied analytical approaches for comprehensive intelligence assessment.",
+  },
 ]
 
 export function SignalsSection() {
