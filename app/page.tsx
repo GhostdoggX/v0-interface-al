@@ -62,7 +62,7 @@ const jsonLd = [
       "height": 60
     },
     "description": "Professional OSINT, digital forensics, cryptocurrency tracing, corporate due diligence, and open-source intelligence services. Discreet, verified, and legally grounded.",
-    "foundingDate": "2025",
+    "foundingDate": "2026",
     "founder": {
       "@type": "Person",
       "name": "Michael",
