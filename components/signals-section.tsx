@@ -220,7 +220,12 @@ export function SignalsSection() {
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {signalsTop.map((signal, index) => (
-          <SignalCard key={index} signal={signal} index={index} />
+          <SignalCard 
+            key={index} 
+            signal={signal} 
+            index={index} 
+            enableScrollEffect={signal.title === "Crypto Forensics"}
+          />
         ))}
       </div>
 
@@ -237,16 +242,18 @@ export function SignalsSection() {
 function SignalCard({
   signal,
   index,
+  enableScrollEffect = false,
 }: {
   signal: { date: string; title: string; note: string }
   index: number
+  enableScrollEffect?: boolean
 }) {
   const cardRef = useRef<HTMLElement>(null)
   const [isScrollActive, setIsScrollActive] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
 
   useEffect(() => {
-    if (!cardRef.current) return
+    if (!enableScrollEffect || !cardRef.current) return
 
     const ctx = gsap.context(() => {
       ScrollTrigger.create({
@@ -258,9 +265,9 @@ function SignalCard({
     }, cardRef)
 
     return () => ctx.revert()
-  }, [])
+  }, [enableScrollEffect])
 
-  const isActive = isHovered || isScrollActive
+  const isActive = isHovered || (enableScrollEffect && isScrollActive)
 
   return (
     <article
@@ -268,6 +275,7 @@ function SignalCard({
       className={cn(
         "group relative flex-shrink-0 w-64 sm:w-72",
         "transition-transform duration-500 ease-out",
+        "hover:-translate-y-2",
         isActive && "-translate-y-2",
       )}
       onMouseEnter={() => setIsHovered(true)}
@@ -291,7 +299,7 @@ function SignalCard({
 
         {/* Title */}
         <h3 className={cn(
-          "font-[var(--font-bebas)] text-3xl tracking-tight mb-3 transition-colors duration-300",
+          "font-[var(--font-bebas)] text-3xl tracking-tight mb-3 transition-colors duration-300 group-hover:text-accent",
           isActive && "text-accent"
         )}>
           {signal.title}
@@ -299,7 +307,7 @@ function SignalCard({
 
         {/* Divider line */}
         <div className={cn(
-          "h-px bg-accent/60 mb-4 transition-all duration-500",
+          "h-px bg-accent/60 mb-4 transition-all duration-500 group-hover:w-full",
           isActive ? "w-full" : "w-12"
         )} />
 
@@ -314,7 +322,7 @@ function SignalCard({
 
       {/* Shadow/depth layer */}
       <div className={cn(
-        "absolute inset-0 -z-10 translate-x-1 translate-y-1 bg-accent/5 transition-opacity duration-300",
+        "absolute inset-0 -z-10 translate-x-1 translate-y-1 bg-accent/5 transition-opacity duration-300 group-hover:opacity-100",
         isActive ? "opacity-100" : "opacity-0"
       )} />
     </article>
