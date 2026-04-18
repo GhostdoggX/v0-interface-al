@@ -93,6 +93,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark bg-background">
+      <head>
+        {/* Preload critical assets */}
+        <link rel="preload" href="/images/wolfhound-logo.png" as="image" />
+        {/* DNS prefetch for analytics */}
+        <link rel="dns-prefetch" href="https://va.vercel-scripts.com" />
+        {/* Preconnect to font origins */}
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      </head>
       <body
         className={`${ibmPlexSans.variable} ${bebasNeue.variable} ${ibmPlexMono.variable} font-sans antialiased overflow-x-hidden`}
       >

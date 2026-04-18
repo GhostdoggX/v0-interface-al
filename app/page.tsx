@@ -1,13 +1,28 @@
 import type { Metadata } from "next"
+import dynamic from "next/dynamic"
 import { HeroSection } from "@/components/hero-section"
-import { SignalsSection } from "@/components/signals-section"
-import { WorkSection } from "@/components/work-section"
-import { PrinciplesSection } from "@/components/principles-section"
-import { AboutSection } from "@/components/about-section"
-import { StorySection } from "@/components/story-section"
-import { ColophonSection } from "@/components/colophon-section"
 import { SideNav } from "@/components/side-nav"
 import { DropdownMenuNav } from "@/components/dropdown-menu-nav"
+
+// Dynamic imports for below-the-fold sections to reduce initial bundle
+const SignalsSection = dynamic(() => import("@/components/signals-section").then(mod => ({ default: mod.SignalsSection })), {
+  loading: () => <div className="min-h-screen" />,
+})
+const WorkSection = dynamic(() => import("@/components/work-section").then(mod => ({ default: mod.WorkSection })), {
+  loading: () => <div className="min-h-screen" />,
+})
+const PrinciplesSection = dynamic(() => import("@/components/principles-section").then(mod => ({ default: mod.PrinciplesSection })), {
+  loading: () => <div className="min-h-[50vh]" />,
+})
+const AboutSection = dynamic(() => import("@/components/about-section").then(mod => ({ default: mod.AboutSection })), {
+  loading: () => <div className="min-h-[50vh]" />,
+})
+const StorySection = dynamic(() => import("@/components/story-section").then(mod => ({ default: mod.StorySection })), {
+  loading: () => <div className="min-h-[50vh]" />,
+})
+const ColophonSection = dynamic(() => import("@/components/colophon-section").then(mod => ({ default: mod.ColophonSection })), {
+  loading: () => <div className="min-h-[30vh]" />,
+})
 
 export const metadata: Metadata = {
   title: 'Wolfhound Trace - Professional OSINT & Corporate Investigation Services',
