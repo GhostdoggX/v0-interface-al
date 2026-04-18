@@ -64,9 +64,6 @@ export function HeroSection() {
                 <img 
                   src="/images/wolfhound-logo.png" 
                   alt="" 
-                  loading="eager"
-                  decoding="async"
-                  fetchPriority="high"
                   className="w-full h-full object-contain brightness-125 transition-all duration-500 hover:brightness-150 hover:drop-shadow-[0_0_25px_rgba(192,192,192,0.6)]"
                   aria-hidden="true"
                 />
