@@ -134,14 +134,14 @@ export function AboutSection() {
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
             href="mailto:wolfhound_trace@pm.me"
-            className="group inline-flex items-center gap-3 border border-foreground/20 px-6 py-3 font-mono text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200"
+            className="group inline-flex items-center gap-3 border border-accent/50 px-6 py-3 font-mono text-xs uppercase tracking-widest text-accent hover:bg-accent hover:text-background transition-all duration-200"
           >
             <ScrambleTextOnHover text="Report a Concern" as="span" duration={0.6} />
             <BitmapChevron className="transition-transform duration-[400ms] ease-in-out group-hover:rotate-45" />
           </Link>
           <Link
-            href="mailto:info@enquiries.wolfhoundtrace.com?subject=Confidential%20Consultation%20Request"
-            className="group inline-flex items-center gap-3 border border-accent/50 px-6 py-3 font-mono text-xs uppercase tracking-widest text-accent hover:bg-accent hover:text-background transition-all duration-200"
+            href="mailto:enquiries@wolfhoundtrace.com?subject=Confidential%20Consultation%20Request"
+            className="group inline-flex items-center gap-3 border border-foreground/20 px-6 py-3 font-mono text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200"
           >
             <ScrambleTextOnHover text="Request Consultation" as="span" duration={0.6} />
             <BitmapChevron className="transition-transform duration-[400ms] ease-in-out group-hover:rotate-45" />
