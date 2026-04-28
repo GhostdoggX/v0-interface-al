@@ -95,7 +95,7 @@ const jsonLd = [
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "email": "enquiries@wolfhoundtrace.com",
+      "email": "info@enquiries.wolfhoundtrace.com",
       "contactType": "customer service",
       "availableLanguage": "English"
     },
