@@ -138,7 +138,7 @@ export function AboutSection() {
         {/* CTA */}
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
-            href="mailto:wolfhound_trace@pm.me"
+            href="mailto:wolfhound_trace@pm.me?subject=URGENT%20%26%20CONFIDENTIAL%20!%20Concern%20Report"
             className="group inline-flex items-center gap-3 border border-accent/50 px-6 py-3 font-mono text-xs uppercase tracking-widest text-accent hover:bg-accent hover:text-background transition-all duration-200"
           >
             <ScrambleTextOnHover text="Report a Concern" as="span" duration={0.6} />
