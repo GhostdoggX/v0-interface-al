@@ -83,29 +83,32 @@ export function DropdownMenuNav() {
       </button>
 
       {/* Dropdown Menu */}
-      {isOpen && (
-        <div
-          className="absolute top-full right-0 mt-2 border border-[#f97316] bg-[#0a0a0a] overflow-hidden min-w-[180px] shadow-lg"
-        >
-          <div className="flex flex-col py-2">
-            {navItems.map(({ id, label, number }) => (
-              <button
-                key={id}
-                onClick={() => scrollToSection(id)}
-                className={cn(
-                  "w-full flex items-center gap-3 px-4 py-3 font-mono text-xs uppercase tracking-widest transition-all duration-200 text-left",
-                  activeSection === id 
-                    ? "text-[#f97316] bg-[#f97316]/10" 
-                    : "text-white/70 hover:text-white hover:bg-white/5"
-                )}
-              >
-                <span className="text-[10px] opacity-60 w-5">{number}</span>
-                <span>{label}</span>
-              </button>
-            ))}
-          </div>
+      <div
+        className={cn(
+          "absolute top-full right-0 mt-2 border border-border bg-background/95 backdrop-blur-sm overflow-hidden transition-all duration-300 origin-top-right min-w-[160px]",
+          isOpen 
+            ? "opacity-100 scale-100 translate-y-0" 
+            : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
+        )}
+      >
+        <div className="py-2">
+          {navItems.map(({ id, label, number }) => (
+            <button
+              key={id}
+              onClick={() => scrollToSection(id)}
+              className={cn(
+                "w-full flex items-center gap-3 sm:gap-4 px-4 sm:px-6 py-2 sm:py-3 font-mono text-[10px] sm:text-xs uppercase tracking-widest transition-all duration-200 text-left",
+                activeSection === id 
+                  ? "text-accent bg-accent/5" 
+                  : "text-muted-foreground hover:text-foreground hover:bg-foreground/5"
+              )}
+            >
+              <span className="text-[9px] sm:text-[10px] opacity-60">{number}</span>
+              <span>{label}</span>
+            </button>
+          ))}
         </div>
-      )}
+      </div>
     </div>
   )
 }
