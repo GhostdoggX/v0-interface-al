@@ -38,26 +38,6 @@ const experiments = [
     medium: "Security",
     description: "Evaluation of digital footprints and potential exposure risks.",
   },
-  {
-    title: "Search for Missing Person",
-    medium: "Location",
-    description: "Professional tracing and location services for missing individuals with discretion and care.",
-  },
-  {
-    title: "Physical Asset Location",
-    medium: "Recovery",
-    description: "Identification and tracking of concealed or misappropriated assets across jurisdictions.",
-  },
-  {
-    title: "Executive Protection",
-    medium: "Security",
-    description: "Comprehensive protection services and risk assessment for high-profile individuals.",
-  },
-  {
-    title: "Brand Protection",
-    medium: "Defense",
-    description: "Monitoring and safeguarding brand integrity against counterfeiting and misuse.",
-  },
 ]
 
 export function WorkSection() {
@@ -233,17 +213,12 @@ function WorkCard({
   return (
     <article
       ref={cardRef}
-      role="button"
-      tabIndex={0}
-      aria-label={`${experiment.title}: ${experiment.description}`}
       className={cn(
-        "group relative border border-border/40 p-4 flex flex-col justify-between transition-all duration-500 cursor-pointer overflow-hidden min-h-[160px] w-[280px] sm:w-[320px] flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background",
+        "group relative border border-border/40 p-4 flex flex-col justify-between transition-all duration-500 cursor-pointer overflow-hidden min-h-[160px]",
         isActive && "border-accent/60",
       )}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onFocus={() => setIsHovered(true)}
-      onBlur={() => setIsHovered(false)}
     >
       {/* Background layer */}
       <div

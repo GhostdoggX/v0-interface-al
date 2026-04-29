@@ -8,10 +8,7 @@ import { BitmapChevron } from "@/components/bitmap-chevron"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-// Register only if not already registered
-if (typeof window !== "undefined" && !ScrollTrigger.isRegistered) {
-  gsap.registerPlugin(ScrollTrigger)
-}
+gsap.registerPlugin(ScrollTrigger)
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -51,7 +48,7 @@ export function HeroSection() {
       <div ref={contentRef} className="flex-1 w-full">
         <SplitFlapAudioProvider>
           <div className="relative flex flex-col">
-            <SplitFlapText text="WOLFHOUND" speed={40} className="text-scale-sm" />
+            <SplitFlapText text="WOLFHOUND" speed={80} className="text-scale-sm" />
             <div className="relative group/logo">
               {/* Logo positioned behind TRACE - hidden on mobile, visible on larger screens */}
               <div 
@@ -67,14 +64,11 @@ export function HeroSection() {
                 <img 
                   src="/images/wolfhound-logo.png" 
                   alt="" 
-                  loading="eager"
-                  decoding="async"
-                  fetchPriority="high"
                   className="w-full h-full object-contain brightness-125 transition-all duration-500 hover:brightness-150 hover:drop-shadow-[0_0_25px_rgba(192,192,192,0.6)]"
                   aria-hidden="true"
                 />
               </div>
-              <SplitFlapText text="TRACE" speed={40} className="text-scale-sm text-accent relative z-10" isAccent />
+              <SplitFlapText text="TRACE" speed={80} className="text-scale-sm text-accent relative z-10" isAccent />
             </div>
             <div className="mt-4">
               <SplitFlapMuteToggle />
@@ -103,7 +97,7 @@ export function HeroSection() {
             <BitmapChevron className="transition-transform duration-[400ms] ease-in-out group-hover:rotate-45" />
           </a>
           <a
-            href="mailto:enquiries@wolfhoundtrace.com?subject=Service%20initial%20consultation"
+            href="mailto:info@enquiries.wolfhoundtrace.com?subject=Service%20initial%20consultation"
             className="group inline-flex items-center gap-3 border border-foreground/20 px-4 sm:px-6 py-2 sm:py-3 font-mono text-[10px] sm:text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200"
           >
             <ScrambleTextOnHover text="Initiate Contact" as="span" duration={0.6} />
