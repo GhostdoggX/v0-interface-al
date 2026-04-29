@@ -8,7 +8,10 @@ import { BitmapChevron } from "@/components/bitmap-chevron"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-gsap.registerPlugin(ScrollTrigger)
+// Register only if not already registered
+if (typeof window !== "undefined" && !ScrollTrigger.isRegistered) {
+  gsap.registerPlugin(ScrollTrigger)
+}
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -64,6 +67,9 @@ export function HeroSection() {
                 <img 
                   src="/images/wolfhound-logo.png" 
                   alt="" 
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
                   className="w-full h-full object-contain brightness-125 transition-all duration-500 hover:brightness-150 hover:drop-shadow-[0_0_25px_rgba(192,192,192,0.6)]"
                   aria-hidden="true"
                 />

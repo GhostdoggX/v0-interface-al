@@ -145,7 +145,7 @@ export function ColophonSection() {
             </li>
             <li>
               <a
-                href="#"
+                href="mailto:enquiries@wolfhoundtrace.com?subject=Consultation%20Request"
                 className="font-mono text-xs text-foreground/80 hover:text-accent transition-colors duration-200"
               >
                 Consultation
@@ -189,7 +189,7 @@ export function ColophonSection() {
         className="mt-8 pt-8 border-t border-border/20 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
       >
         <p className="font-mono text-[10px] text-muted-foreground uppercase tracking-widest">
-          © 2025 Wolfhound Trace. All communications handled with discretion.
+          © 2026 Wolfhound Trace. All communications handled with discretion.
         </p>
         <p className="font-mono text-[10px] text-muted-foreground">Built for clarity, discretion, and verification.</p>
       </div>

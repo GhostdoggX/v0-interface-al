@@ -62,6 +62,14 @@ export function DropdownMenuNav() {
       {/* Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
+        onKeyDown={(e) => {
+          if (e.key === 'Escape' && isOpen) {
+            setIsOpen(false)
+          }
+        }}
+        aria-expanded={isOpen}
+        aria-haspopup="menu"
+        aria-label="Navigation menu"
         className={cn(
           "flex items-center gap-2 sm:gap-4 border-2 px-4 py-2 sm:px-8 sm:py-4 font-mono text-[10px] sm:text-xs uppercase tracking-widest transition-all duration-300",
           isOpen 
@@ -77,13 +85,15 @@ export function DropdownMenuNav() {
         <span className={cn(
           "transition-transform duration-300",
           isOpen ? "rotate-180" : ""
-        )}>
+        )} aria-hidden="true">
           ↓
         </span>
       </button>
 
       {/* Dropdown Menu */}
-      <div
+      <nav
+        role="menu"
+        aria-label="Site navigation"
         className={cn(
           "absolute top-full right-0 mt-2 border border-border bg-background/95 backdrop-blur-sm overflow-hidden transition-all duration-300 origin-top-right min-w-[160px]",
           isOpen 
@@ -95,7 +105,13 @@ export function DropdownMenuNav() {
           {navItems.map(({ id, label, number }) => (
             <button
               key={id}
+              role="menuitem"
               onClick={() => scrollToSection(id)}
+              onKeyDown={(e) => {
+                if (e.key === 'Escape') {
+                  setIsOpen(false)
+                }
+              }}
               className={cn(
                 "w-full flex items-center gap-3 sm:gap-4 px-4 sm:px-6 py-2 sm:py-3 font-mono text-[10px] sm:text-xs uppercase tracking-widest transition-all duration-200 text-left",
                 activeSection === id 
@@ -103,12 +119,12 @@ export function DropdownMenuNav() {
                   : "text-muted-foreground hover:text-foreground hover:bg-foreground/5"
               )}
             >
-              <span className="text-[9px] sm:text-[10px] opacity-60">{number}</span>
+              <span className="text-[9px] sm:text-[10px] opacity-60" aria-hidden="true">{number}</span>
               <span>{label}</span>
             </button>
           ))}
         </div>
-      </div>
+      </nav>
     </div>
   )
 }

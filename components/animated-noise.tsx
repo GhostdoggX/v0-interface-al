@@ -1,68 +1,18 @@
 "use client"
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, memo } from "react"
 
 interface AnimatedNoiseProps {
   opacity?: number
   className?: string
 }
 
-export function AnimatedNoise({ opacity = 0.05, className }: AnimatedNoiseProps) {
-  const canvasRef = useRef<HTMLCanvasElement>(null)
-
-  useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
-
-    const ctx = canvas.getContext("2d")
-    if (!ctx) return
-
-    let animationId: number
-    let frame = 0
-
-    const resize = () => {
-      canvas.width = canvas.offsetWidth / 2
-      canvas.height = canvas.offsetHeight / 2
-    }
-
-    const generateNoise = () => {
-      const imageData = ctx.createImageData(canvas.width, canvas.height)
-      const data = imageData.data
-
-      for (let i = 0; i < data.length; i += 4) {
-        const value = Math.random() * 255
-        data[i] = value // R
-        data[i + 1] = value // G
-        data[i + 2] = value // B
-        data[i + 3] = 255 // A
-      }
-
-      ctx.putImageData(imageData, 0, 0)
-    }
-
-    const animate = () => {
-      frame++
-      // Update noise every 2 frames for performance while still looking animated
-      if (frame % 2 === 0) {
-        generateNoise()
-      }
-      animationId = requestAnimationFrame(animate)
-    }
-
-    resize()
-    window.addEventListener("resize", resize)
-    animate()
-
-    return () => {
-      window.removeEventListener("resize", resize)
-      cancelAnimationFrame(animationId)
-    }
-  }, [])
-
+// Use static SVG noise instead of canvas animation for better performance
+export const AnimatedNoise = memo(function AnimatedNoise({ opacity = 0.05, className }: AnimatedNoiseProps) {
   return (
-    <canvas
-      ref={canvasRef}
+    <div
       className={className}
+      aria-hidden="true"
       style={{
         position: "absolute",
         inset: 0,
@@ -71,7 +21,9 @@ export function AnimatedNoise({ opacity = 0.05, className }: AnimatedNoiseProps)
         pointerEvents: "none",
         opacity,
         mixBlendMode: "overlay",
+        backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+        backgroundRepeat: "repeat",
       }}
     />
   )
-}
+})
