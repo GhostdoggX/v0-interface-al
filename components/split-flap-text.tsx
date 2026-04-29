@@ -139,9 +139,10 @@ function SplitFlapTextInner({ text, className = "", speed = 50, isAccent = false
   }, [])
 
   useEffect(() => {
+    // Reduce initialization delay for faster perceived load
     const timer = setTimeout(() => {
       setHasInitialized(true)
-    }, 1000)
+    }, 300)
     return () => clearTimeout(timer)
   }, [])
 
@@ -221,14 +222,14 @@ function SplitFlapChar({ char, index, animationKey, skipEntrance, speed, playCli
     setIsSettled(false)
     setCurrentChar(CHARSET[Math.floor(Math.random() * CHARSET.length)])
 
-    const baseFlips = 8
-    const startDelay = skipEntrance ? tileDelay * 400 : tileDelay * 800
+    const baseFlips = 5
+    const startDelay = skipEntrance ? tileDelay * 200 : tileDelay * 400
     let flipIndex = 0
     let hasStartedSettling = false
 
     timeoutRef.current = setTimeout(() => {
       intervalRef.current = setInterval(() => {
-        const settleThreshold = baseFlips + index * 3
+        const settleThreshold = baseFlips + index * 2
 
         if (flipIndex >= settleThreshold && !hasStartedSettling) {
           hasStartedSettling = true
