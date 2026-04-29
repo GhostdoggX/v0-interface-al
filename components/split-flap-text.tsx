@@ -148,8 +148,17 @@ function SplitFlapTextInner({ text, className = "", speed = 50, isAccent = false
   return (
     <div
       className={`inline-flex gap-[0.08em] items-center cursor-pointer ${className}`}
+      role="img"
       aria-label={text}
+      tabIndex={0}
       onMouseEnter={handleMouseEnter}
+      onFocus={handleMouseEnter}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault()
+          handleMouseEnter()
+        }
+      }}
       style={{ perspective: "1000px" }}
     >
       {chars.map((char, index) => (
