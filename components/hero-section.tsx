@@ -97,7 +97,7 @@ export function HeroSection() {
             <BitmapChevron className="transition-transform duration-[400ms] ease-in-out group-hover:rotate-45" />
           </a>
           <a
-            href="mailto:info@enquiries.wolfhoundtrace.com?subject=Service%20initial%20consultation"
+            href="mailto:enquiries@wolfhoundtrace.com?subject=Service%20initial%20consultation"
             className="group inline-flex items-center gap-3 border border-foreground/20 px-4 sm:px-6 py-2 sm:py-3 font-mono text-[10px] sm:text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200"
           >
             <ScrambleTextOnHover text="Initiate Contact" as="span" duration={0.6} />
