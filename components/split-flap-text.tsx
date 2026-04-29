@@ -139,10 +139,10 @@ function SplitFlapTextInner({ text, className = "", speed = 50, isAccent = false
   }, [])
 
   useEffect(() => {
-    // Reduce initialization delay for faster perceived load
+    // Minimal initialization delay for instant perceived load
     const timer = setTimeout(() => {
       setHasInitialized(true)
-    }, 300)
+    }, 50)
     return () => clearTimeout(timer)
   }, [])
 
@@ -200,7 +200,7 @@ function SplitFlapChar({ char, index, animationKey, skipEntrance, speed, playCli
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null)
   const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-  const tileDelay = 0.15 * index
+  const tileDelay = 0.05 * index
 
   const bgColor = isSettled 
     ? (isAccent ? "rgba(249, 115, 22, 1)" : "hsl(0, 0%, 0%)") 
@@ -222,14 +222,14 @@ function SplitFlapChar({ char, index, animationKey, skipEntrance, speed, playCli
     setIsSettled(false)
     setCurrentChar(CHARSET[Math.floor(Math.random() * CHARSET.length)])
 
-    const baseFlips = 5
-    const startDelay = skipEntrance ? tileDelay * 200 : tileDelay * 400
+    const baseFlips = 3
+    const startDelay = skipEntrance ? tileDelay * 80 : tileDelay * 150
     let flipIndex = 0
     let hasStartedSettling = false
 
     timeoutRef.current = setTimeout(() => {
       intervalRef.current = setInterval(() => {
-        const settleThreshold = baseFlips + index * 2
+        const settleThreshold = baseFlips + index
 
         if (flipIndex >= settleThreshold && !hasStartedSettling) {
           hasStartedSettling = true
@@ -264,9 +264,9 @@ function SplitFlapChar({ char, index, animationKey, skipEntrance, speed, playCli
 
   return (
     <motion.div
-      initial={skipEntrance ? false : { opacity: 0, y: 20 }}
+      initial={skipEntrance ? false : { opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: tileDelay, duration: 0.3, ease: "easeOut" }}
+      transition={{ delay: tileDelay * 0.5, duration: 0.15, ease: "easeOut" }}
       className="relative overflow-hidden flex items-center justify-center font-[family-name:var(--font-bebas)]"
       style={{
         fontSize: "var(--split-flap-size, clamp(4rem, 15vw, 14rem))",
@@ -302,8 +302,8 @@ function SplitFlapChar({ char, index, animationKey, skipEntrance, speed, playCli
         initial={{ rotateX: -90 }}
         animate={{ rotateX: 0 }}
         transition={{
-          delay: skipEntrance ? tileDelay * 0.5 : tileDelay + 0.15,
-          duration: 0.25,
+          delay: skipEntrance ? tileDelay * 0.3 : tileDelay * 0.5,
+          duration: 0.12,
           ease: [0.22, 0.61, 0.36, 1],
         }}
         className="absolute inset-x-0 top-0 bottom-1/2 origin-bottom overflow-hidden"
