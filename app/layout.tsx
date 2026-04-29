@@ -1,21 +1,29 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { IBM_Plex_Sans, IBM_Plex_Mono, Bebas_Neue } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
-import { SmoothScroll } from "@/components/smooth-scroll"
 import "./globals.css"
 
 const ibmPlexSans = IBM_Plex_Sans({
   weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   variable: "--font-ibm-plex-sans",
+  display: "swap",
 })
+
 const ibmPlexMono = IBM_Plex_Mono({
   weight: ["400", "500"],
   subsets: ["latin"],
   variable: "--font-ibm-plex-mono",
+  display: "swap",
 })
-const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"], variable: "--font-bebas" })
+
+const bebasNeue = Bebas_Neue({ 
+  weight: "400", 
+  subsets: ["latin"], 
+  variable: "--font-bebas",
+  display: "swap",
+})
 
 export const metadata: Metadata = {
   title: {
@@ -37,6 +45,8 @@ export const metadata: Metadata = {
     'Executive Protection',
     'Threat Assessment',
     'Asset Discovery',
+    'Missing Person Investigation',
+    'Brand Protection',
   ],
   generator: "v0.app",
   metadataBase: new URL('https://wolfhoundtrace.com'),
@@ -86,18 +96,27 @@ export const metadata: Metadata = {
   },
 }
 
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#0a0a0a' },
+    { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+  ],
+  width: 'device-width',
+  initialScale: 1,
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark bg-background">
+    <html lang="en" className="dark bg-background scroll-smooth">
       <body
         className={`${ibmPlexSans.variable} ${bebasNeue.variable} ${ibmPlexMono.variable} font-sans antialiased overflow-x-hidden`}
       >
         <div className="noise-overlay" aria-hidden="true" />
-        <SmoothScroll>{children}</SmoothScroll>
+        {children}
         <Analytics />
       </body>
     </html>
