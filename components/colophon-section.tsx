@@ -81,7 +81,7 @@ export function ColophonSection() {
           Ready to discuss your investigation needs?
         </p>
         <a
-          href="mailto:info@enquiries.wolfhoundtrace.com?subject=Service%20initial%20consultation"
+          href="mailto:enquiries@wolfhoundtrace.com?subject=Service%20initial%20consultation"
           className="mt-8 inline-flex items-center gap-3 border border-foreground/20 px-6 py-3 font-mono text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200"
         >
           Initiate Contact
@@ -90,39 +90,37 @@ export function ColophonSection() {
       </div>
 
       {/* Multi-column layout */}
-      <div ref={gridRef} className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 md:gap-12">
+      <div ref={gridRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
         {/* Services */}
         <div className="col-span-1">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Services</h4>
+          <h4 className="inline-block border border-[#f97316] px-3 py-1 font-mono text-[9px] uppercase tracking-[0.3em] text-white mb-4">Services</h4>
           <ul className="space-y-2">
             <li className="font-mono text-xs text-foreground/80">OSINT</li>
+            <li className="font-mono text-xs text-foreground/80">Search for Missing Person</li>
+            <li className="font-mono text-xs text-foreground/80">Physical Asset Location</li>
             <li className="font-mono text-xs text-foreground/80">Digital Forensics</li>
-          </ul>
-        </div>
-
-        {/* Specialties */}
-        <div className="col-span-1">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Specialties</h4>
-          <ul className="space-y-2">
+            <li className="font-mono text-xs text-foreground/80">Executive Protection</li>
+            <li className="font-mono text-xs text-foreground/80">Brand Protection</li>
             <li className="font-mono text-xs text-foreground/80">Crypto Tracing</li>
             <li className="font-mono text-xs text-foreground/80">Due Diligence</li>
-            <li className="font-mono text-xs text-foreground/80">Asset Discovery</li>
           </ul>
         </div>
 
         {/* Clients */}
         <div className="col-span-1">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Clients</h4>
+          <h4 className="inline-block border border-[#f97316] px-3 py-1 font-mono text-[9px] uppercase tracking-[0.3em] text-white mb-4">Clients</h4>
           <ul className="space-y-2">
+            <li className="font-mono text-xs text-foreground/80">Non Profit</li>
+            <li className="font-mono text-xs text-foreground/80">Private Enquiries</li>
             <li className="font-mono text-xs text-foreground/80">Law Firms</li>
             <li className="font-mono text-xs text-foreground/80">Corporations</li>
             <li className="font-mono text-xs text-foreground/80">Private Equity</li>
           </ul>
         </div>
 
-        {/* Location */}
+        {/* Coverage */}
         <div className="col-span-1">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Coverage</h4>
+          <h4 className="inline-block border border-[#f97316] px-3 py-1 font-mono text-[9px] uppercase tracking-[0.3em] text-white mb-4">Coverage</h4>
           <ul className="space-y-2">
             <li className="font-mono text-xs text-foreground/80">Global</li>
             <li className="font-mono text-xs text-foreground/80">Confidential</li>
@@ -131,7 +129,7 @@ export function ColophonSection() {
 
         {/* Contact */}
         <div className="col-span-1">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Contact</h4>
+          <h4 className="inline-block border border-[#f97316] px-3 py-1 font-mono text-[9px] uppercase tracking-[0.3em] text-white mb-4">Contact</h4>
           <ul className="space-y-2">
             <li>
               <a
@@ -170,7 +168,7 @@ export function ColophonSection() {
 
         {/* Security */}
         <div className="col-span-1">
-          <h4 className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground mb-4">Security</h4>
+          <h4 className="inline-block border border-[#f97316] px-3 py-1 font-mono text-[9px] uppercase tracking-[0.3em] text-white mb-4">Security</h4>
           <ul className="space-y-2">
             <li className="font-mono text-xs text-foreground/80">Encrypted</li>
             <li className="font-mono text-xs text-foreground/80">Confidential</li>

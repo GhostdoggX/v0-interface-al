@@ -50,9 +50,9 @@ export function HeroSection() {
           <div className="relative flex flex-col">
             <SplitFlapText text="WOLFHOUND" speed={80} className="text-scale-sm" />
             <div className="relative group/logo">
-              {/* Logo positioned behind TRACE - centered between U and N of WOLFHOUND, top aligned with TRACE */}
+              {/* Logo positioned behind TRACE - hidden on mobile, visible on larger screens */}
               <div 
-                className="absolute pointer-events-auto opacity-30 cursor-pointer transition-all duration-500 hover:opacity-60 rounded-full overflow-hidden"
+                className="absolute pointer-events-auto opacity-30 cursor-pointer transition-all duration-500 hover:opacity-60 rounded-full overflow-hidden hidden md:block"
                 style={{ 
                   height: 'calc(var(--split-flap-size, clamp(4rem, 15vw, 14rem)) * 1.5)',
                   aspectRatio: '1/1',
@@ -88,17 +88,17 @@ export function HeroSection() {
           We help clients uncover, verify, and understand complex digital information with discretion, precision, and legally grounded methods.
         </p>
 
-        <div className="mt-16 flex items-center gap-8">
+        <div className="mt-10 md:mt-16 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
           <a
             href="#work"
-            className="group inline-flex items-center gap-3 border border-foreground/20 px-6 py-3 font-mono text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200"
+            className="group inline-flex items-center gap-3 border border-foreground/20 px-4 sm:px-6 py-2 sm:py-3 font-mono text-[10px] sm:text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200"
           >
             <ScrambleTextOnHover text="View Services" as="span" duration={0.6} />
             <BitmapChevron className="transition-transform duration-[400ms] ease-in-out group-hover:rotate-45" />
           </a>
           <a
-            href="mailto:info@enquiries.wolfhoundtrace.com?subject=Service%20initial%20consultation"
-            className="group inline-flex items-center gap-3 border border-foreground/20 px-6 py-3 font-mono text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200"
+            href="mailto:enquiries@wolfhoundtrace.com?subject=Service%20initial%20consultation"
+            className="group inline-flex items-center gap-3 border border-foreground/20 px-4 sm:px-6 py-2 sm:py-3 font-mono text-[10px] sm:text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200"
           >
             <ScrambleTextOnHover text="Initiate Contact" as="span" duration={0.6} />
             <BitmapChevron className="transition-transform duration-[400ms] ease-in-out group-hover:rotate-45" />

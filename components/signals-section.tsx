@@ -36,6 +36,11 @@ const signalsBottom = [
     title: "Social Engineering Defense",
     note: "Vulnerability assessments for corporate information security.",
   },
+  {
+    date: "2025.03.25",
+    title: "Diverse Human Analysis and Reasoning",
+    note: "Multi-perspective expert evaluation combining varied analytical approaches for comprehensive intelligence assessment.",
+  },
 ]
 
 export function SignalsSection() {
@@ -168,10 +173,10 @@ export function SignalsSection() {
       />
 
       {/* Section header */}
-      <div ref={headerRef} className="mb-16 pr-6 md:pr-12 flex items-end justify-between">
+      <div ref={headerRef} className="mb-8 md:mb-16 pr-6 md:pr-12 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
         <div>
           <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">01 / Intel</span>
-          <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">LATEST CAPABILITIES</h2>
+          <h2 className="mt-2 md:mt-4 font-[var(--font-bebas)] text-3xl sm:text-5xl md:text-7xl tracking-tight">ANALYSIS METHODOLOGY</h2>
         </div>
         
         {/* Navigation Arrows */}
@@ -180,7 +185,7 @@ export function SignalsSection() {
             onClick={scrollLeft}
             disabled={!canScrollLeft}
             className={cn(
-              "w-12 h-12 border-2 flex items-center justify-center font-mono text-lg transition-all duration-300",
+              "w-10 h-10 sm:w-12 sm:h-12 border-2 flex items-center justify-center font-mono text-base sm:text-lg transition-all duration-300",
               canScrollLeft 
                 ? "border-[#f97316] text-[#f97316] hover:bg-[#f97316] hover:text-black cursor-pointer" 
                 : "border-border/30 text-muted-foreground/30 cursor-not-allowed"
@@ -193,7 +198,7 @@ export function SignalsSection() {
             onClick={scrollRight}
             disabled={!canScrollRight}
             className={cn(
-              "w-12 h-12 border-2 flex items-center justify-center font-mono text-lg transition-all duration-300",
+              "w-10 h-10 sm:w-12 sm:h-12 border-2 flex items-center justify-center font-mono text-base sm:text-lg transition-all duration-300",
               canScrollRight 
                 ? "border-[#f97316] text-[#f97316] hover:bg-[#f97316] hover:text-black cursor-pointer" 
                 : "border-border/30 text-muted-foreground/30 cursor-not-allowed"
@@ -215,12 +220,17 @@ export function SignalsSection() {
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {signalsTop.map((signal, index) => (
-          <SignalCard key={index} signal={signal} index={index} />
+          <SignalCard 
+            key={index} 
+            signal={signal} 
+            index={index} 
+            enableScrollEffect={signal.title === "Crypto Forensics"}
+          />
         ))}
       </div>
 
       {/* Bottom row - Evidence Preservation & Social Engineering Defense */}
-      <div className="flex gap-8 mt-8 pr-6 md:pr-12">
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mt-8 pr-6 md:pr-12">
         {signalsBottom.map((signal, index) => (
           <SignalCard key={index} signal={signal} index={index + 3} />
         ))}
@@ -232,20 +242,50 @@ export function SignalsSection() {
 function SignalCard({
   signal,
   index,
+  enableScrollEffect = false,
 }: {
   signal: { date: string; title: string; note: string }
   index: number
+  enableScrollEffect?: boolean
 }) {
+  const cardRef = useRef<HTMLElement>(null)
+  const [isScrollActive, setIsScrollActive] = useState(false)
+  const [isHovered, setIsHovered] = useState(false)
+
+  useEffect(() => {
+    if (!enableScrollEffect || !cardRef.current) return
+
+    const ctx = gsap.context(() => {
+      ScrollTrigger.create({
+        trigger: cardRef.current,
+        start: "top 85%",
+        onEnter: () => setIsScrollActive(true),
+        onLeaveBack: () => setIsScrollActive(false),
+      })
+    }, cardRef)
+
+    return () => ctx.revert()
+  }, [enableScrollEffect])
+
+  const isActive = isHovered || (enableScrollEffect && isScrollActive)
+
   return (
     <article
+      ref={cardRef}
       className={cn(
-        "group relative flex-shrink-0 w-72",
+        "group relative flex-shrink-0 w-64 sm:w-72",
         "transition-transform duration-500 ease-out",
         "hover:-translate-y-2",
+        isActive && "-translate-y-2",
       )}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       {/* Card with paper texture effect */}
-      <div className="relative bg-card border border-border/50 md:border-t md:border-l md:border-r-0 md:border-b-0 p-6">
+      <div className={cn(
+        "relative bg-card border border-border/50 md:border-t md:border-l md:border-r-0 md:border-b-0 p-6 transition-all duration-300",
+        isActive && "border-accent/50"
+      )}>
         {/* Top torn edge effect */}
         <div className="absolute -top-px left-0 right-0 h-px bg-gradient-to-r from-transparent via-border/40 to-transparent" />
 
@@ -258,12 +298,18 @@ function SignalCard({
         </div>
 
         {/* Title */}
-        <h3 className="font-[var(--font-bebas)] text-3xl tracking-tight mb-3 group-hover:text-accent transition-colors duration-300">
+        <h3 className={cn(
+          "font-[var(--font-bebas)] text-3xl tracking-tight mb-3 transition-colors duration-300 group-hover:text-accent",
+          isActive && "text-accent"
+        )}>
           {signal.title}
         </h3>
 
         {/* Divider line */}
-        <div className="w-12 h-px bg-accent/60 mb-4 group-hover:w-full transition-all duration-500" />
+        <div className={cn(
+          "h-px bg-accent/60 mb-4 transition-all duration-500 group-hover:w-full",
+          isActive ? "w-full" : "w-12"
+        )} />
 
         {/* Description */}
         <p className="font-mono text-xs text-muted-foreground leading-relaxed">{signal.note}</p>
@@ -275,7 +321,10 @@ function SignalCard({
       </div>
 
       {/* Shadow/depth layer */}
-      <div className="absolute inset-0 -z-10 translate-x-1 translate-y-1 bg-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      <div className={cn(
+        "absolute inset-0 -z-10 translate-x-1 translate-y-1 bg-accent/5 transition-opacity duration-300 group-hover:opacity-100",
+        isActive ? "opacity-100" : "opacity-0"
+      )} />
     </article>
   )
 }

@@ -139,7 +139,19 @@
 
 /* Split-flap text size scaling */
 .text-scale-sm {
-  --split-flap-size: clamp(3rem, 12vw, 10rem);
+  --split-flap-size: clamp(2rem, 10vw, 10rem);
+}
+
+@media (min-width: 640px) {
+  .text-scale-sm {
+    --split-flap-size: clamp(2.5rem, 12vw, 10rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .text-scale-sm {
+    --split-flap-size: clamp(3rem, 12vw, 10rem);
+  }
 }
 
 /* Pulse glow animation for menu button */

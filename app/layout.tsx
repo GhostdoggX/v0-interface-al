@@ -18,10 +18,55 @@ const ibmPlexMono = IBM_Plex_Mono({
 const bebasNeue = Bebas_Neue({ weight: "400", subsets: ["latin"], variable: "--font-bebas" })
 
 export const metadata: Metadata = {
-  title: "Wolfhound Trace | Expert OSINT & Digital Intelligence",
+  title: {
+    template: '%s | Wolfhound Trace',
+    default: 'Wolfhound Trace | Expert OSINT & Digital Intelligence Services',
+  },
   description:
-    "Wolfhound Trace helps clients uncover, verify, and understand complex digital information with discretion, precision, and legally grounded methods.",
+    "Wolfhound Trace provides expert OSINT Investigation, Corporate Investigation Services, Physical Security Specialist solutions, HUMINT Services, and Physical and Cyber Security Fusion. Discreet, precise, and legally grounded methods.",
+  keywords: [
+    'Physical Security Specialist',
+    'Corporate Investigation Services', 
+    'OSINT Investigation',
+    'Physical and Cyber Security Fusion',
+    'Wolfhound Trace Investigation',
+    'HUMINT Services',
+    'Digital Forensics',
+    'Due Diligence',
+    'Cryptocurrency Tracing',
+    'Executive Protection',
+    'Threat Assessment',
+    'Asset Discovery',
+  ],
   generator: "v0.app",
+  metadataBase: new URL('https://wolfhoundtrace.com'),
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    siteName: 'Wolfhound Trace',
+    type: 'website',
+    locale: 'en_IE',
+    title: 'Wolfhound Trace | Expert OSINT & Digital Intelligence',
+    description: 'Professional OSINT Investigation, Corporate Investigation Services, Physical Security Specialist solutions, and HUMINT Services with discretion and precision.',
+    url: 'https://wolfhoundtrace.com',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Wolfhound Trace | Expert OSINT & Digital Intelligence',
+    description: 'Professional tracking, OSINT investigation, and corporate security services.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   icons: {
     icon: [
       {

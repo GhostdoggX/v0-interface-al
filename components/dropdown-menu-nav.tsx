@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react"
 import { cn } from "@/lib/utils"
 
 const navItems = [
+  { id: "hero", label: "Home", number: "00" },
   { id: "signals", label: "Intel", number: "01" },
   { id: "work", label: "Services", number: "02" },
   { id: "principles", label: "Approach", number: "03" },
@@ -57,12 +58,12 @@ export function DropdownMenuNav() {
   }
 
   return (
-    <div ref={menuRef} className="fixed top-6 right-6 md:top-8 md:right-8 z-[100]">
+    <div ref={menuRef} className="fixed top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 z-[100]">
       {/* Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          "flex items-center gap-4 border-2 px-8 py-4 font-mono text-xs uppercase tracking-widest transition-all duration-300",
+          "flex items-center gap-2 sm:gap-4 border-2 px-4 py-2 sm:px-8 sm:py-4 font-mono text-[10px] sm:text-xs uppercase tracking-widest transition-all duration-300",
           isOpen 
             ? "border-[#f97316] text-[#f97316] bg-[#0a0a0a]" 
             : "border-[#f97316] text-white hover:text-[#f97316] bg-[#0a0a0a]"
@@ -84,7 +85,7 @@ export function DropdownMenuNav() {
       {/* Dropdown Menu */}
       <div
         className={cn(
-          "absolute top-full right-0 mt-2 border border-border bg-background/95 backdrop-blur-sm overflow-hidden transition-all duration-300 origin-top-right",
+          "absolute top-full right-0 mt-2 border border-border bg-background/95 backdrop-blur-sm overflow-hidden transition-all duration-300 origin-top-right min-w-[160px]",
           isOpen 
             ? "opacity-100 scale-100 translate-y-0" 
             : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
@@ -96,13 +97,13 @@ export function DropdownMenuNav() {
               key={id}
               onClick={() => scrollToSection(id)}
               className={cn(
-                "w-full flex items-center gap-4 px-6 py-3 font-mono text-xs uppercase tracking-widest transition-all duration-200 text-left",
+                "w-full flex items-center gap-3 sm:gap-4 px-4 sm:px-6 py-2 sm:py-3 font-mono text-[10px] sm:text-xs uppercase tracking-widest transition-all duration-200 text-left",
                 activeSection === id 
                   ? "text-accent bg-accent/5" 
                   : "text-muted-foreground hover:text-foreground hover:bg-foreground/5"
               )}
             >
-              <span className="text-[10px] opacity-60">{number}</span>
+              <span className="text-[9px] sm:text-[10px] opacity-60">{number}</span>
               <span>{label}</span>
             </button>
           ))}
