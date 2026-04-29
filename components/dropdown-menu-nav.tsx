@@ -85,7 +85,8 @@ export function DropdownMenuNav() {
       {/* Dropdown Menu */}
       {isOpen && (
         <div
-          className="absolute top-full right-0 mt-2 border border-[#f97316] bg-[#0a0a0a] overflow-hidden min-w-[180px] shadow-lg"
+          className="absolute top-full right-0 mt-2 border border-[#f97316] overflow-hidden min-w-[180px] shadow-xl"
+          style={{ backgroundColor: '#0a0a0a' }}
         >
           <div className="flex flex-col py-2">
             {navItems.map(({ id, label, number }) => (
@@ -106,6 +107,7 @@ export function DropdownMenuNav() {
           </div>
         </div>
       )}
+    </div>
     </div>
   )
 }
