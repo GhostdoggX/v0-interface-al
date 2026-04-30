@@ -139,27 +139,17 @@ function SplitFlapTextInner({ text, className = "", speed = 50, isAccent = false
   }, [])
 
   useEffect(() => {
-    // Reduce initialization delay for faster perceived load
     const timer = setTimeout(() => {
       setHasInitialized(true)
-    }, 300)
+    }, 1000)
     return () => clearTimeout(timer)
   }, [])
 
   return (
     <div
       className={`inline-flex gap-[0.08em] items-center cursor-pointer ${className}`}
-      role="img"
       aria-label={text}
-      tabIndex={0}
       onMouseEnter={handleMouseEnter}
-      onFocus={handleMouseEnter}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault()
-          handleMouseEnter()
-        }
-      }}
       style={{ perspective: "1000px" }}
     >
       {chars.map((char, index) => (
@@ -222,14 +212,14 @@ function SplitFlapChar({ char, index, animationKey, skipEntrance, speed, playCli
     setIsSettled(false)
     setCurrentChar(CHARSET[Math.floor(Math.random() * CHARSET.length)])
 
-    const baseFlips = 5
-    const startDelay = skipEntrance ? tileDelay * 200 : tileDelay * 400
+    const baseFlips = 8
+    const startDelay = skipEntrance ? tileDelay * 400 : tileDelay * 800
     let flipIndex = 0
     let hasStartedSettling = false
 
     timeoutRef.current = setTimeout(() => {
       intervalRef.current = setInterval(() => {
-        const settleThreshold = baseFlips + index * 2
+        const settleThreshold = baseFlips + index * 3
 
         if (flipIndex >= settleThreshold && !hasStartedSettling) {
           hasStartedSettling = true

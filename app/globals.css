@@ -163,30 +163,3 @@
     box-shadow: 0 0 30px rgba(249, 115, 22, 0.6);
   }
 }
-
-/* Performance optimizations */
-@layer base {
-  /* Content visibility for off-screen sections */
-  section:not(#hero) {
-    content-visibility: auto;
-    contain-intrinsic-size: auto 100vh;
-  }
-  
-  /* GPU acceleration for animated elements */
-  .transform-gpu {
-    transform: translateZ(0);
-    will-change: transform;
-  }
-  
-  /* Reduce motion for accessibility */
-  @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-      animation-duration: 0.01ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: 0.01ms !important;
-      scroll-behavior: auto !important;
-    }
-  }
-}

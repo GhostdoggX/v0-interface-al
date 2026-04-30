@@ -233,17 +233,12 @@ function WorkCard({
   return (
     <article
       ref={cardRef}
-      role="button"
-      tabIndex={0}
-      aria-label={`${experiment.title}: ${experiment.description}`}
       className={cn(
-        "group relative border border-border/40 p-4 flex flex-col justify-between transition-all duration-500 cursor-pointer overflow-hidden min-h-[160px] w-[280px] sm:w-[320px] flex-shrink-0 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 focus:ring-offset-background",
+        "group relative border border-border/40 p-4 flex flex-col justify-between transition-all duration-500 cursor-pointer overflow-hidden min-h-[160px]",
         isActive && "border-accent/60",
       )}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onFocus={() => setIsHovered(true)}
-      onBlur={() => setIsHovered(false)}
     >
       {/* Background layer */}
       <div
