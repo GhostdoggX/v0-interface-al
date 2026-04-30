@@ -185,7 +185,7 @@ export function WorkSection() {
       {/* Asymmetric grid */}
       <div
         ref={gridRef}
-        className="flex flex-wrap gap-4 md:gap-6 overflow-x-auto scrollbar-hide pb-4"
+        className="flex flex-nowrap gap-4 md:gap-6 overflow-x-auto scrollbar-hide pb-4"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         onScroll={checkScrollPosition}
       >
@@ -211,6 +211,7 @@ function WorkCard({
   persistHover?: boolean
 }) {
   const [isHovered, setIsHovered] = useState(false)
+  const [isTouched, setIsTouched] = useState(false)
   const cardRef = useRef<HTMLElement>(null)
   const [isScrollActive, setIsScrollActive] = useState(false)
 
@@ -228,17 +229,29 @@ function WorkCard({
     return () => ctx.revert()
   }, [persistHover])
 
-  const isActive = isHovered || isScrollActive
+  const isActive = isHovered || isScrollActive || isTouched
+
+  const handleTouchStart = () => {
+    setIsTouched(true)
+  }
+
+  const handleTouchEnd = () => {
+    // Keep touched state for 3 seconds so user can read the description
+    setTimeout(() => setIsTouched(false), 3000)
+  }
 
   return (
     <article
       ref={cardRef}
       className={cn(
-        "group relative border border-border/40 p-4 flex flex-col justify-between transition-all duration-500 cursor-pointer overflow-hidden min-h-[160px]",
+        "group relative border border-border/40 p-4 flex flex-col justify-between transition-all duration-500 cursor-pointer overflow-hidden min-h-[160px] w-[280px] sm:w-[300px] md:w-[320px] flex-shrink-0",
         isActive && "border-accent/60",
       )}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      onClick={() => setIsTouched(!isTouched)}
     >
       {/* Background layer */}
       <div

@@ -48,7 +48,7 @@ export function HeroSection() {
       <div ref={contentRef} className="flex-1 w-full">
         <SplitFlapAudioProvider>
           <div className="relative flex flex-col">
-            <SplitFlapText text="WOLFHOUND" speed={80} className="text-scale-sm" />
+            <SplitFlapText text="WOLFHOUND" speed={40} className="text-scale-sm" />
             <div className="relative group/logo">
               {/* Logo positioned behind TRACE - hidden on mobile, visible on larger screens */}
               <div 
@@ -68,7 +68,7 @@ export function HeroSection() {
                   aria-hidden="true"
                 />
               </div>
-              <SplitFlapText text="TRACE" speed={80} className="text-scale-sm text-accent relative z-10" isAccent />
+              <SplitFlapText text="TRACE" speed={40} className="text-scale-sm text-accent relative z-10" isAccent />
             </div>
             <div className="mt-4">
               <SplitFlapMuteToggle />

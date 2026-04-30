@@ -1,41 +1,59 @@
 "use client"
 
 import type React from "react"
-
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useCallback } from "react"
 import Lenis from "lenis"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 
-gsap.registerPlugin(ScrollTrigger)
+// Register once at module level
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(ScrollTrigger)
+}
 
 export function SmoothScroll({ children }: { children: React.ReactNode }) {
   const lenisRef = useRef<Lenis | null>(null)
+  const rafIdRef = useRef<number | null>(null)
+
+  const raf = useCallback((time: number) => {
+    lenisRef.current?.raf(time)
+    rafIdRef.current = requestAnimationFrame(raf)
+  }, [])
 
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      smoothWheel: true,
-    })
+    // Defer initialization for faster first paint
+    const initTimeout = setTimeout(() => {
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: "vertical",
+        smoothWheel: true,
+      })
 
-    lenisRef.current = lenis
+      lenisRef.current = lenis
 
-    // Connect Lenis to GSAP ScrollTrigger
-    lenis.on("scroll", ScrollTrigger.update)
+      // Throttled ScrollTrigger updates
+      let ticking = false
+      lenis.on("scroll", () => {
+        if (!ticking) {
+          ticking = true
+          requestAnimationFrame(() => {
+            ScrollTrigger.update()
+            ticking = false
+          })
+        }
+      })
 
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000)
-    })
-
-    gsap.ticker.lagSmoothing(0)
+      // Use native RAF instead of GSAP ticker
+      rafIdRef.current = requestAnimationFrame(raf)
+    }, 50)
 
     return () => {
-      lenis.destroy()
-      gsap.ticker.remove(lenis.raf)
+      clearTimeout(initTimeout)
+      if (rafIdRef.current) cancelAnimationFrame(rafIdRef.current)
+      lenisRef.current?.destroy()
     }
-  }, [])
+  }, [raf])
 
   return <>{children}</>
 }
