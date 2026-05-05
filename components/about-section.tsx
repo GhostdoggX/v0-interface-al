@@ -207,9 +207,6 @@ export function AboutSection() {
             <BitmapChevron className="transition-transform duration-[400ms] ease-in-out group-hover:rotate-45" />
           </Link>
         </div>
-        <a href="#who-we-are" className="inline-flex items-center gap-2 font-mono text-xs text-muted-foreground hover:text-accent transition-colors mt-6">
-          &larr; Back to Who We Are
-        </a>
       </div>
 
       {/* Decorative line */}
