@@ -52,7 +52,7 @@ export function AboutSection() {
       {/* Section header */}
       <div ref={headerRef} className="mb-16">
         <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">04 / About</span>
-        <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">
+        <h2 id="who-we-are" className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">
           <HighlightText parallaxSpeed={0.6}>WHO</HighlightText> WE ARE
         </h2>
 
@@ -108,6 +108,9 @@ export function AboutSection() {
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
           <span className="text-accent">We do not rely on assumptions. We follow the evidence.</span>
         </p>
+        <a href="#who-we-are" className="inline-flex items-center gap-2 font-mono text-xs text-muted-foreground hover:text-accent transition-colors mt-2 mb-4">
+          &larr; Back to Who We Are
+        </a>
 
         <h3 id="evidence-led" className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-10 mb-4">Evidence-Led Investigative Support</h3>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
@@ -125,6 +128,9 @@ export function AboutSection() {
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
           Our investigative work combines traditional security discipline with modern, cyber-informed methodologies. We do not simply react to threats. We help clients identify vulnerabilities early, assess risks carefully, and act on verified facts rather than assumptions.
         </p>
+        <a href="#who-we-are" className="inline-flex items-center gap-2 font-mono text-xs text-muted-foreground hover:text-accent transition-colors mt-2 mb-4">
+          &larr; Back to Who We Are
+        </a>
 
         <h3 id="osint-expertise" className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-10 mb-4">OSINT Expertise in Practice</h3>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
@@ -139,6 +145,9 @@ export function AboutSection() {
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
           This practical experience strengthens every stage of our client work: rapid case assessment, disciplined source validation, evidence-led analysis, and clear, defensible reporting. It enables us to turn fragmented digital traces into actionable intelligence for digital investigations, corporate intelligence, and threat-intelligence matters.
         </p>
+        <a href="#who-we-are" className="inline-flex items-center gap-2 font-mono text-xs text-muted-foreground hover:text-accent transition-colors mt-2 mb-4">
+          &larr; Back to Who We Are
+        </a>
 
         <h3 id="who-we-support" className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-10 mb-4">Who We Support</h3>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
@@ -147,6 +156,9 @@ export function AboutSection() {
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
           Our role is not to create fear. Our role is to help clients understand what is happening, what can be verified, and what practical steps may be taken next.
         </p>
+        <a href="#who-we-are" className="inline-flex items-center gap-2 font-mono text-xs text-muted-foreground hover:text-accent transition-colors mt-2 mb-4">
+          &larr; Back to Who We Are
+        </a>
 
         <h3 id="digital-safety" className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-10 mb-4">Commitment to Digital Safety</h3>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
@@ -158,6 +170,9 @@ export function AboutSection() {
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
           <span className="text-accent">We believe that awareness, early action, and open communication are essential to protecting people from digital harm.</span>
         </p>
+        <a href="#who-we-are" className="inline-flex items-center gap-2 font-mono text-xs text-muted-foreground hover:text-accent transition-colors mt-2 mb-4">
+          &larr; Back to Who We Are
+        </a>
 
         <h3 className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-10 mb-4">Integrity and Confidentiality</h3>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
@@ -192,6 +207,9 @@ export function AboutSection() {
             <BitmapChevron className="transition-transform duration-[400ms] ease-in-out group-hover:rotate-45" />
           </Link>
         </div>
+        <a href="#who-we-are" className="inline-flex items-center gap-2 font-mono text-xs text-muted-foreground hover:text-accent transition-colors mt-6">
+          &larr; Back to Who We Are
+        </a>
       </div>
 
       {/* Decorative line */}
