@@ -77,7 +77,7 @@ export function AboutSection() {
 
         <h3 className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-10 mb-4">Evidence-Led Investigative Support</h3>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
-          My name is Michael, and I am the founder of WolfhoundTrace Investigations. I am a security professional with nearly two decades of combined experience across corporate security, physical protection, and investigative work. I lead a team of analysts with experience from different parts of industry, united by the same mission: to support clients with <span className="text-foreground">integrity, discretion, and evidence-led analysis.</span>
+          My name is Michael, and I am the founder of WolfhoundTrace Investigations. Along with Tiana, a co-founder, we are the core of the investigative team. I am a security professional with nearly two decades of combined experience across corporate security, physical protection, and investigative work. I lead a team of analysts with experience from different parts of industry, united by the same mission: to support clients with <span className="text-foreground">integrity, discretion, and evidence-led analysis.</span>
         </p>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
           WolfhoundTrace was built around one non-negotiable principle: <span className="text-accent">integrity comes first.</span>
