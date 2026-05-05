@@ -55,6 +55,40 @@ export function AboutSection() {
         <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">
           <HighlightText parallaxSpeed={0.6}>WHO</HighlightText> WE ARE
         </h2>
+
+        {/* Quick Navigation */}
+        <ul className="mt-6 space-y-2 font-mono text-xs md:text-sm">
+          <li>
+            <a href="#our-purpose" className="text-muted-foreground hover:text-accent transition-colors">
+              &bull; Our Purpose
+            </a>
+          </li>
+          <li>
+            <a href="#evidence-led" className="text-muted-foreground hover:text-accent transition-colors">
+              &bull; Evidence-Led Investigative Support
+            </a>
+          </li>
+          <li>
+            <a href="#osint-expertise" className="text-muted-foreground hover:text-accent transition-colors">
+              &bull; OSINT Expertise in Practice
+            </a>
+          </li>
+          <li>
+            <a href="#who-we-support" className="text-muted-foreground hover:text-accent transition-colors">
+              &bull; Who We Support
+            </a>
+          </li>
+          <li>
+            <a href="#digital-safety" className="text-muted-foreground hover:text-accent transition-colors">
+              &bull; Commitment to Digital Safety
+            </a>
+          </li>
+          <li>
+            <a href="#get-in-touch" className="text-muted-foreground hover:text-accent transition-colors">
+              &bull; Get in Touch
+            </a>
+          </li>
+        </ul>
       </div>
 
       {/* Content */}
@@ -67,7 +101,7 @@ export function AboutSection() {
           We believe that effective security begins with <span className="text-foreground">evidence, sound judgement, and the discipline to look beyond appearances.</span>
         </p>
 
-        <h3 className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-10 mb-4">Our Purpose</h3>
+        <h3 id="our-purpose" className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-10 mb-4">Our Purpose</h3>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
           Our work is built around a clear mission: to bring clarity where uncertainty exists. Whether a client is facing suspicious behaviour, internal risk, online harm, or reputational concerns, we help assess the situation carefully, verify the facts, and provide clear, practical guidance.
         </p>
@@ -75,7 +109,7 @@ export function AboutSection() {
           <span className="text-accent">We do not rely on assumptions. We follow the evidence.</span>
         </p>
 
-        <h3 className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-10 mb-4">Evidence-Led Investigative Support</h3>
+        <h3 id="evidence-led" className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-10 mb-4">Evidence-Led Investigative Support</h3>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
           My name is Michael, and I am the founder of WolfhoundTrace Investigations. Along with Tiana, a co-founder, we are the core of the investigative team. I am an Open Source Intelligence Analyst at Wolfhound Trace, with a specialisation in OSINT, Physical Security Analysis, corporate risk, and missing people and asset investigation. I support clients by converting dispersed and often incomplete information into precise, defensible, and actionable intelligence. My work includes source verification, digital footprint analysis, due diligence, threat assessment, and investigative support for matters requiring discretion, analytical rigour, and evidential clarity. With a disciplined intelligence-led approach, I identify relevant patterns, uncover inconsistencies, and develop findings that can be reviewed, challenged, and acted upon with confidence. My work is tailored for decision-making in <span className="text-foreground">sensitive, high-stakes, and fast-moving environments.</span>
         </p>
@@ -92,7 +126,7 @@ export function AboutSection() {
           Our investigative work combines traditional security discipline with modern, cyber-informed methodologies. We do not simply react to threats. We help clients identify vulnerabilities early, assess risks carefully, and act on verified facts rather than assumptions.
         </p>
 
-        <h3 className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-10 mb-4">OSINT Expertise in Practice</h3>
+        <h3 id="osint-expertise" className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-10 mb-4">OSINT Expertise in Practice</h3>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
           <span className="text-foreground">We turn advanced OSINT into actionable intelligence.</span>
         </p>
@@ -106,7 +140,7 @@ export function AboutSection() {
           This practical experience strengthens every stage of our client work: rapid case assessment, disciplined source validation, evidence-led analysis, and clear, defensible reporting. It enables us to turn fragmented digital traces into actionable intelligence for digital investigations, corporate intelligence, and threat-intelligence matters.
         </p>
 
-        <h3 className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-10 mb-4">Who We Support</h3>
+        <h3 id="who-we-support" className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-10 mb-4">Who We Support</h3>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
           WolfhoundTrace Investigations supports clients in situations where clarity, discretion, and careful analysis are essential. We work with businesses facing internal or external risks, institutions seeking guidance on digital safety, and individuals dealing with online harm, harassment, suspicious behaviour, or uncertainty around digital information.
         </p>
@@ -114,7 +148,7 @@ export function AboutSection() {
           Our role is not to create fear. Our role is to help clients understand what is happening, what can be verified, and what practical steps may be taken next.
         </p>
 
-        <h3 className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-10 mb-4">Commitment to Digital Safety</h3>
+        <h3 id="digital-safety" className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-10 mb-4">Commitment to Digital Safety</h3>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
           Our mission extends beyond the corporate environment. We are deeply committed to protecting vulnerable individuals in digital spaces and promoting safer online communities.
         </p>
@@ -136,7 +170,7 @@ export function AboutSection() {
           At WolfhoundTrace, security is not limited to gates, cameras, or software. These tools matter, but they are only effective when supported by clear thinking, careful observation, and factual analysis.
         </p>
 
-        <h3 className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-10 mb-4">Get in Touch</h3>
+        <h3 id="get-in-touch" className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-10 mb-4">Get in Touch</h3>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-8">
           If you or your organisation are facing suspicious behaviour, require investigative insight, or need guidance on online harm and risk-related issues, we encourage you to reach out. Every concern deserves to be heard, assessed, and taken seriously.
         </p>
