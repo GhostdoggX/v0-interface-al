@@ -78,7 +78,7 @@ export function ColophonSection() {
         <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">06 / Contact</span>
         <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">GET IN TOUCH</h2>
         <p className="mt-6 max-w-md font-mono text-sm text-muted-foreground leading-relaxed">
-          Ready to discuss your investigation needs?
+          Ready to discuss your analysis needs?
         </p>
         <a
           href="mailto:enquiries@wolfhoundtrace.com?subject=Service%20initial%20consultation"
