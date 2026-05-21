@@ -11,7 +11,7 @@ import { DropdownMenuNav } from "@/components/dropdown-menu-nav"
 
 export const metadata: Metadata = {
   title: 'Wolfhound Trace - Professional OSINT & Corporate Investigation Services',
-  description: 'Expert Physical Security Specialist, OSINT Investigation, Corporate Investigation Services, HUMINT Services, and Physical and Cyber Security Fusion. Secure, precise, and legally grounded investigative solutions.',
+  description: 'Expert Physical Security Specialist, OSINT Investigation, Corporate Investigation Services, HUMINT Services, and Physical and Cyber Security Fusion. Secure, precise, and legally grounded analytic solutions.',
   keywords: [
     'Physical Security Specialist',
     'Corporate Investigation Services',

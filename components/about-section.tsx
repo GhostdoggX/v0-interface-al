@@ -65,7 +65,7 @@ export function AboutSection() {
           </li>
           <li>
             <a href="#evidence-led" className="text-muted-foreground hover:text-accent transition-colors">
-              &bull; Evidence-Led Investigative Support
+              &bull; Evidence-Led Analytic Support
             </a>
           </li>
           <li>
@@ -112,9 +112,9 @@ export function AboutSection() {
           &larr; Back to Who We Are
         </a>
 
-        <h3 id="evidence-led" className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-8 mb-3">Evidence-Led Investigative Support</h3>
+        <h3 id="evidence-led" className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-8 mb-3">Evidence-Led Analytic Support</h3>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
-          My name is Michael, and I am the founder of WolfhoundTrace Investigations. Along with Tiana, a co-founder, we are the core of the investigative team. I am an Open Source Intelligence Analyst at Wolfhound Trace, with a specialisation in OSINT, Physical Security Analysis, corporate risk, and missing people and asset investigation. I support clients by converting dispersed and often incomplete information into precise, defensible, and actionable intelligence. My work includes source verification, digital footprint analysis, due diligence, threat assessment, and investigative support for matters requiring discretion, analytical rigour, and evidential clarity. With a disciplined intelligence-led approach, I identify relevant patterns, uncover inconsistencies, and develop findings that can be reviewed, challenged, and acted upon with confidence. My work is tailored for decision-making in <span className="text-foreground">sensitive, high-stakes, and fast-moving environments.</span>
+          My name is Michael, and I am the founder of WolfhoundTrace Investigations. Along with Tiana, a co-founder, we are the core of the analytic team. I am an Open Source Intelligence Analyst at Wolfhound Trace, with a specialisation in OSINT, Physical Security Analysis, corporate risk, and missing people and asset investigation. I support clients by converting dispersed and often incomplete information into precise, defensible, and actionable intelligence. My work includes source verification, digital footprint analysis, due diligence, threat assessment, and analytic support for matters requiring discretion, analytical rigour, and evidential clarity. With a disciplined intelligence-led approach, I identify relevant patterns, uncover inconsistencies, and develop findings that can be reviewed, challenged, and acted upon with confidence. My work is tailored for decision-making in <span className="text-foreground">sensitive, high-stakes, and fast-moving environments.</span>
         </p>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
           Tiana is an analyst at Wolfhound Trace with a background in scientific research, structured evidence evaluation, and complex data analysis. Her work focuses on transforming fragmented open-source information into clear, verified, and practical intelligence. She applies OSINT methods to digital footprint analysis, source verification, due diligence support, and risk assessment. She also supports competitive intelligence and market-oriented OSINT analysis, helping clients understand competitors, positioning, reputational signals, and publicly visible business risks. Tiana brings a methodical, research-driven approach to every case: <span className="text-foreground">separating facts from assumptions, identifying inconsistencies, and building findings that can be reviewed, challenged, and acted upon.</span>
@@ -126,7 +126,7 @@ export function AboutSection() {
           WolfhoundTrace was built around one non-negotiable principle: <span className="text-accent">integrity comes first.</span>
         </p>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
-          Our investigative work combines traditional security discipline with modern, cyber-informed methodologies. We do not simply react to threats. We help clients identify vulnerabilities early, assess risks carefully, and act on verified facts rather than assumptions.
+          Our analytic work combines traditional security discipline with modern, cyber-informed methodologies. We do not simply react to threats. We help clients identify vulnerabilities early, assess risks carefully, and act on verified facts rather than assumptions.
         </p>
         <a href="#who-we-are" className="inline-flex items-center gap-2 font-mono text-xs text-muted-foreground hover:text-accent transition-colors mt-1 mb-2">
           &larr; Back to Who We Are
@@ -137,7 +137,7 @@ export function AboutSection() {
           <span className="text-foreground">We turn advanced OSINT into actionable intelligence.</span>
         </p>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
-          At WolfhoundTrace, our investigative methods are shaped by practical, high-pressure experience. Our team actively participates in international OSINT Capture the Flag challenges, working through complex scenarios involving digital footprint analysis, person tracing, social media intelligence, source verification, and missing-person search workflows.
+          At WolfhoundTrace, our analytic methods are shaped by practical, high-pressure experience. Our team actively participates in international OSINT Capture the Flag challenges, working through complex scenarios involving digital footprint analysis, person tracing, social media intelligence, source verification, and missing-person search workflows.
         </p>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
           We recently secured <span className="text-accent">second place in the OSINT Shadows Conference CTF — Missing Persons track.</span> This achievement demonstrates our ability to identify, verify, and connect fragmented open-source data under competitive conditions.
@@ -179,7 +179,7 @@ export function AboutSection() {
           In line with our commitment to operational security and client confidentiality, certain personal identifiers and background details are intentionally kept private. Where appropriate, relevant professional context can be shared within a confidential client conversation.
         </p>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
-          What remains public is our unwavering commitment to <span className="text-foreground">evidence-led work, discretion, integrity, and responsible investigative support.</span>
+          What remains public is our unwavering commitment to <span className="text-foreground">evidence-led work, discretion, integrity, and responsible analytic support.</span>
         </p>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-4">
           At WolfhoundTrace, security is not limited to gates, cameras, or software. These tools matter, but they are only effective when supported by clear thinking, careful observation, and factual analysis.
@@ -187,7 +187,7 @@ export function AboutSection() {
 
         <h3 id="get-in-touch" className="font-[var(--font-bebas)] text-2xl md:text-3xl tracking-tight text-foreground mt-8 mb-3">Get in Touch</h3>
         <p className="font-mono text-sm md:text-base text-muted-foreground leading-relaxed mb-6">
-          If you or your organisation are facing suspicious behaviour, require investigative insight, or need guidance on online harm and risk-related issues, we encourage you to reach out. Every concern deserves to be heard, assessed, and taken seriously.
+          If you or your organisation are facing suspicious behaviour, require analytic insight, or need guidance on online harm and risk-related issues, we encourage you to reach out. Every concern deserves to be heard, assessed, and taken seriously.
         </p>
 
         {/* CTA */}

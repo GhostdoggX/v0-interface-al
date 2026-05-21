@@ -31,7 +31,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="font-[var(--font-bebas)] text-2xl tracking-tight text-foreground mb-4">1. Scope and Controller</h2>
             <p>
-              This Privacy Policy explains how Wolfhound Trace processes personal data in connection with its website, client communications, and professional investigative and intelligence services. For the purposes of applicable data protection laws, including the General Data Protection Regulation (GDPR) and the Swiss Federal Act on Data Protection (nFADP), Wolfhound Trace acts as a data controller with respect to personal data processed for its own business operations.
+              This Privacy Policy explains how Wolfhound Trace processes personal data in connection with its website, client communications, and professional analytic and intelligence services. For the purposes of applicable data protection laws, including the General Data Protection Regulation (GDPR) and the Swiss Federal Act on Data Protection (nFADP), Wolfhound Trace acts as a data controller with respect to personal data processed for its own business operations.
             </p>
           </section>
 
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="font-[var(--font-bebas)] text-2xl tracking-tight text-foreground mb-4">3. Categories of Data We May Process</h2>
             <p>
-              Depending on the nature of the engagement, we may process identification data, contact details, professional information, communication records, technical website data, and other information necessary to perform due diligence, investigative, or intelligence-related work. Where permitted by law and required for a specific mandate, we may also process data obtained from lawful public sources or from third parties acting within their legal authority.
+              Depending on the nature of the engagement, we may process identification data, contact details, professional information, communication records, technical website data, and other information necessary to perform due diligence, analytic, or intelligence-related work. Where permitted by law and required for a specific mandate, we may also process data obtained from lawful public sources or from third parties acting within their legal authority.
             </p>
           </section>
 
