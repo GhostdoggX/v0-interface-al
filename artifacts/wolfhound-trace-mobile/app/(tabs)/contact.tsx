@@ -1,5 +1,6 @@
 import { Feather } from "@expo/vector-icons";
 import * as Haptics from "expo-haptics";
+import { router } from "expo-router";
 import { Linking } from "react-native";
 import React from "react";
 import {
@@ -150,6 +151,12 @@ export default function ContactScreen() {
         <Text style={styles.disclaimerSub}>
           © 2026 Wolfhound Trace · All communications handled with discretion.
         </Text>
+        <Pressable
+          onPress={() => router.push("/privacy")}
+          style={({ pressed }) => [styles.privacyLink, pressed && { opacity: 0.6 }]}
+        >
+          <Text style={styles.privacyLinkText}>Privacy Policy →</Text>
+        </Pressable>
       </View>
     </ScrollView>
   );
@@ -322,6 +329,16 @@ function makeStyles(colors: ReturnType<typeof useColors>, topPad: number, bottom
       fontFamily: "Inter_400Regular",
       fontSize: 9,
       color: colors.mutedForeground + "80",
+      letterSpacing: 1,
+    },
+    privacyLink: {
+      marginTop: 4,
+      alignSelf: "flex-start",
+    },
+    privacyLinkText: {
+      fontFamily: "Inter_400Regular",
+      fontSize: 10,
+      color: colors.accent,
       letterSpacing: 1,
     },
   });
