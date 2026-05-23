@@ -11,7 +11,7 @@ export function PrinciplesSection() {
   const principlesRef = useRef<HTMLDivElement>(null)
 
   const principles = [
-    { number: "01", titleParts: [{ text: "DISCREET", highlight: true }, { text: " HANDLING", highlight: false }], description: "Confidential handling of sensitive investigations and client communications.", align: "left" },
+    { number: "01", titleParts: [{ text: "DISCREET", highlight: true }, { text: " HANDLING", highlight: false }], description: "Confidential handling of sensitive digital evidence and clients' communications.", align: "left" },
     { number: "02", titleParts: [{ text: "VERIFIED", highlight: true }, { text: " FINDINGS", highlight: false }], description: "Every finding is validated before being delivered for decision-making or review.", align: "right" },
     { number: "03", titleParts: [{ text: "TARGETED ", highlight: false }, { text: "PRECISION", highlight: true }], description: "Focused intelligence work designed to answer specific questions with clarity.", align: "left" },
     { number: "04", titleParts: [{ text: "LEGALLY ", highlight: false }, { text: "GROUNDED", highlight: true }], description: "Methods that are ethically sound and legally defensible in any jurisdiction.", align: "right" },
