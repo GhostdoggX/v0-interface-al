@@ -48,7 +48,7 @@ export default function PrivacyPage() {
 
           <section className="pt-8 border-t border-border/30">
             <h2 className="font-[var(--font-bebas)] text-2xl tracking-tight text-foreground mb-4">Legal Disclaimer</h2>
-            <p>Wolfhound Trace provides professional open-source intelligence (OSINT), digital investigation, and due diligence services. All investigations are conducted in compliance with applicable laws and regulations, including GDPR and data protection standards.</p>
+            <p>Wolfhound Trace provides professional open-source intelligence (OSINT), digital intelligence analysis, and due diligence services. All investigations are conducted in compliance with applicable laws and regulations, including GDPR and data protection standards.</p>
           </section>
         </div>
 

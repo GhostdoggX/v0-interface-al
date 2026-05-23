@@ -41,7 +41,7 @@ export function ColophonSection() {
       <div ref={headerRef} className="mb-16">
         <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">06 / Contact</span>
         <h2 className="mt-4 font-[var(--font-bebas)] text-5xl md:text-7xl tracking-tight">GET IN TOUCH</h2>
-        <p className="mt-6 max-w-md font-mono text-sm text-muted-foreground leading-relaxed">Ready to discuss your investigation needs?</p>
+        <p className="mt-6 max-w-md font-mono text-sm text-muted-foreground leading-relaxed">Ready to discuss your intelligence analysis needs?</p>
         <a href="mailto:enquiries@wolfhoundtrace.com?subject=Service%20initial%20consultation" className="mt-8 inline-flex items-center gap-3 border border-foreground/20 px-6 py-3 font-mono text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200">
           Initiate Contact
           <span className="transition-transform duration-300 hover:translate-x-1">→</span>
@@ -84,7 +84,7 @@ export function ColophonSection() {
       </div>
 
       <div className="mt-16 pt-8 border-t border-border/20">
-        <p className="font-mono text-[10px] text-muted-foreground/70 leading-relaxed max-w-4xl">Wolfhound Trace provides professional open-source intelligence (OSINT), digital investigation, and due diligence services. All investigations are conducted in compliance with applicable laws and regulations, including GDPR and data protection standards.</p>
+        <p className="font-mono text-[10px] text-muted-foreground/70 leading-relaxed max-w-4xl">Wolfhound Trace provides professional open-source intelligence (OSINT), digital intelligence analysis, and due diligence services. All investigations are conducted in compliance with applicable laws and regulations, including GDPR and data protection standards.</p>
       </div>
 
       <div ref={footerRef} className="mt-8 pt-8 border-t border-border/20 flex flex-col md:flex-row md:items-center md:justify-between gap-4">

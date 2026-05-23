@@ -54,7 +54,7 @@ export default function StoryPage() {
           <section className="mb-16">
             <h3 className="font-[var(--font-bebas)] text-3xl md:text-4xl tracking-tight mb-6">OUR <span className="text-accent">MISSION</span></h3>
             <p className="font-mono text-sm leading-relaxed mb-6" style={{ color: 'rgb(192,192,192)' }}>At Wolfhound Trace, we carry that same spirit into the digital world. Our mission is to uncover the hidden — the wolves in sheep&apos;s clothing moving quietly through networks, data trails, and online shadows. Like our namesake, we operate with focus, discipline, and integrity.</p>
-            <p className="font-mono text-sm leading-relaxed" style={{ color: 'rgb(192,192,192)' }}>Every investigation we undertake — whether corporate, digital, or financial — receives the same level of dedication. We treat each client with equal importance and discretion, ensuring absolute confidentiality and pursuing every lead until fully verified.</p>
+            <p className="font-mono text-sm leading-relaxed" style={{ color: 'rgb(192,192,192)' }}>Every intelligence analysis we undertake — whether corporate, digital, or financial — receives the same level of dedication. We treat each client with equal importance and discretion, ensuring absolute confidentiality and pursuing every lead until fully verified.</p>
           </section>
 
           <section className="mb-16">
@@ -71,7 +71,7 @@ export default function StoryPage() {
           </section>
 
           <section>
-            <p className="font-mono text-sm mb-6" style={{ color: 'rgb(192,192,192)' }}>Ready to discuss your investigation needs?</p>
+            <p className="font-mono text-sm mb-6" style={{ color: 'rgb(192,192,192)' }}>Ready to discuss your intelligence analysis needs?</p>
             <a href="mailto:enquiries@wolfhoundtrace.com?subject=Service%20initial%20consultation" className="inline-flex items-center gap-3 border border-foreground/20 px-6 py-3 font-mono text-xs uppercase tracking-widest text-foreground hover:border-accent hover:text-accent transition-all duration-200">
               Initiate Contact <span className="transition-transform duration-300 hover:translate-x-1">→</span>
             </a>

@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger)
 
 const experiments = [
-  { title: "Corporate Due Diligence", medium: "Investigation", description: "Comprehensive background verification for business partners, vendors, and investment targets." },
+  { title: "Corporate Due Diligence", medium: "Intelligence Analysis", description: "Comprehensive background verification for business partners, vendors, and investment targets." },
   { title: "Digital Forensics", medium: "Analysis", description: "Recovery and examination of digital evidence from devices and online sources." },
   { title: "Cryptocurrency Tracing", medium: "Blockchain", description: "Tracking and mapping crypto transactions across wallets and exchanges." },
   { title: "Open-Source Intelligence", medium: "OSINT", description: "Systematic collection and analysis of publicly available information." },
