@@ -72,7 +72,7 @@ export function WorkSection() {
         <div>
           <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02 / Services</span>
           <h2 className="mt-2 md:mt-4 font-[var(--font-bebas)] text-3xl sm:text-5xl md:text-7xl tracking-tight">CAPABILITIES</h2>
-          <p className="mt-3 max-w-md font-mono text-xs text-muted-foreground leading-relaxed">From corporate due diligence to digital forensics and open-source investigations.</p>
+          <p className="mt-3 max-w-md font-mono text-xs text-muted-foreground leading-relaxed">From corporate due diligence to digital forensics and open-source intelligence.</p>
         </div>
         <div className="flex gap-2">
           <button onClick={scrollLeft} disabled={!canScrollLeft} className={cn("w-10 h-10 sm:w-12 sm:h-12 border-2 flex items-center justify-center font-mono text-base sm:text-lg transition-all duration-300", canScrollLeft ? "border-[#f97316] text-[#f97316] hover:bg-[#f97316] hover:text-black cursor-pointer" : "border-border/30 text-muted-foreground/30 cursor-not-allowed")} aria-label="Scroll left">←</button>
