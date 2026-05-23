@@ -65,7 +65,7 @@ export default function StoryPage() {
 
           <section className="mb-16">
             <h3 className="font-[var(--font-bebas)] text-3xl md:text-4xl tracking-tight mb-6">OUR <span className="text-accent">COMMITMENT</span></h3>
-            <p className="font-mono text-sm leading-relaxed mb-6" style={{ color: 'rgb(192,192,192)' }}>Like the hounds of old, our investigators are trained to see what others miss. We operate with unwavering loyalty to our clients&apos; privacy and a fierce commitment to uncovering the truth — no matter how deeply it is buried beneath layers of corporate obfuscation or digital anonymity.</p>
+            <p className="font-mono text-sm leading-relaxed mb-6" style={{ color: 'rgb(192,192,192)' }}>Like the hounds of old, our analysts are trained to see what others miss. We operate with unwavering loyalty to our clients&apos; privacy and a fierce commitment to uncovering the truth — no matter how deeply it is buried beneath layers of corporate obfuscation or digital anonymity.</p>
             <p className="font-mono text-sm text-foreground font-medium leading-relaxed text-lg">We do not simply search; we trace.</p>
             <p className="font-mono text-sm text-accent leading-relaxed mt-4">Relentless in pursuit. Silent in execution.</p>
           </section>

@@ -84,7 +84,7 @@ export function ColophonSection() {
       </div>
 
       <div className="mt-16 pt-8 border-t border-border/20">
-        <p className="font-mono text-[10px] text-muted-foreground/70 leading-relaxed max-w-4xl">Wolfhound Trace provides professional open-source intelligence (OSINT), digital intelligence analysis, and due diligence services. All investigations are conducted in compliance with applicable laws and regulations, including GDPR and data protection standards.</p>
+        <p className="font-mono text-[10px] text-muted-foreground/70 leading-relaxed max-w-4xl">Wolfhound Trace provides professional open-source intelligence (OSINT), digital intelligence analysis, and due diligence services. All analytic work is conducted in compliance with applicable laws and regulations, including GDPR and data protection standards.</p>
       </div>
 
       <div ref={footerRef} className="mt-8 pt-8 border-t border-border/20 flex flex-col md:flex-row md:items-center md:justify-between gap-4">

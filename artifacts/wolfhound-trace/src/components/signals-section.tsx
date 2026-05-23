@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger"
 gsap.registerPlugin(ScrollTrigger)
 
 const signalsTop = [
-  { date: "2025.06.10", title: "Crypto Forensics", note: "Enhanced blockchain analysis capabilities for cross-chain investigations." },
+  { date: "2025.06.10", title: "Crypto Forensics", note: "Enhanced blockchain analysis capabilities for cross-chain analysis." },
   { date: "2025.05.28", title: "Dark Web Monitoring", note: "Proactive threat detection across hidden networks and forums." },
   { date: "2025.05.15", title: "AI-Powered OSINT", note: "Machine learning integration for pattern recognition in large datasets." },
 ]
