@@ -23,7 +23,7 @@ export default function AboutPage() {
             </div>
           </SplitFlapAudioProvider>
           <h2 className="font-[var(--font-bebas)] text-muted-foreground/60 text-[clamp(1rem,3vw,2rem)] mt-6 tracking-wide">About Us</h2>
-          <p className="mt-12 max-w-md font-mono text-sm text-muted-foreground leading-relaxed">The people and principles behind WolfhoundTrace Investigations.</p>
+          <p className="mt-12 max-w-md font-mono text-sm text-muted-foreground leading-relaxed">The people and principles behind WolfhoundTrace.</p>
           <div className="mt-16">
             <Link href="/" className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-accent transition-colors duration-200">
               <span className="rotate-180">→</span> Back to Home
@@ -39,7 +39,7 @@ export default function AboutPage() {
       <div className="relative z-10 px-6 md:pl-28 md:pr-12 py-16 md:py-24">
         <article className="max-w-3xl">
           <section className="mb-16">
-            <p className="font-mono text-lg md:text-xl text-foreground leading-relaxed mb-8">Hello, my name is <span className="text-accent">Michael</span> and I&apos;m founder of WolfhoundTrace Investigations.</p>
+            <p className="font-mono text-lg md:text-xl text-foreground leading-relaxed mb-8">Hello, my name is <span className="text-accent">Michael</span> and I&apos;m founder of WolfhoundTrace.</p>
           </section>
           <section className="mb-16">
             <h3 className="font-[var(--font-bebas)] text-3xl md:text-4xl tracking-tight mb-6">OUR <span className="text-accent">PHILOSOPHY</span></h3>
