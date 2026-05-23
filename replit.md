@@ -1,36 +1,47 @@
-# [Project name]
+# Wolfhound Trace
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Professional OSINT and digital intelligence investigation services website, migrated from Next.js to Vite + React.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
+- Start the site: use the `artifacts/wolfhound-trace: web` workflow
 - `pnpm run typecheck` — full typecheck across all packages
 - `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
 
 ## Stack
 
 - pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
+- Frontend: React + Vite, Tailwind v4 (`@tailwindcss/vite`)
+- Routing: Wouter
+- Animations: GSAP + ScrollTrigger, Framer Motion
+- Smooth scroll: Lenis
+- Fonts: IBM Plex Sans, IBM Plex Mono, Bebas Neue (Google Fonts)
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/wolfhound-trace/` — the entire frontend site
+- `artifacts/wolfhound-trace/src/index.css` — design tokens (oklch colors, font vars, grid-bg, pulseGlow)
+- `artifacts/wolfhound-trace/src/App.tsx` — top-level router
+- `artifacts/wolfhound-trace/src/pages/` — route pages: home, about, story, privacy
+- `artifacts/wolfhound-trace/src/components/` — all section and UI components
+- `artifacts/wolfhound-trace/public/images/` — wolfhound-logo.png, wolfhound-vigilant.jpg, wolfhound-wireframe.jpg
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Pure frontend — no backend/API needed; all pages are static React components
+- Tailwind v4 with `@tailwindcss/vite` (no postcss.config.mjs — conflicts with v4)
+- Uses oklch() color values throughout (not HSL) for perceptually uniform color
+- `next/link` replaced with `wouter` Link; `"use client"` directives removed
+- Wouter `<Router base>` strips the Vite BASE_URL prefix for correct path-based routing in Replit proxy
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+- 4 routes: `/` (full single-page scrollable site), `/about`, `/story`, `/privacy`
+- Hero section with animated split-flap display tiles (WOLFHOUND / TRACE), optional sound effects
+- Horizontal-scrolling Intel and Services sections with GSAP scroll animations
+- Principles section with highlight parallax text effects
+- Side navigation dots + floating dropdown menu with active-section tracking
+- Dark monochrome + orange (#f97316) design throughout
 
 ## User preferences
 
@@ -38,8 +49,12 @@ _Populate as you build — explicit user instructions worth remembering across s
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- Do NOT run `pnpm dev` at root; use `restart_workflow` for the `artifacts/wolfhound-trace: web` workflow
+- Tailwind v4: no postcss.config.mjs needed — it conflicts with `@tailwindcss/vite`
+- Original theme uses `oklch()` values, not `hsl()` — keep them as-is in index.css
+- The `--font-bebas` CSS variable is referenced in components as `font-[var(--font-bebas)]`
 
 ## Pointers
 
 - See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details
+- Migration backup lives in `.migration-backup/` — original Next.js source
