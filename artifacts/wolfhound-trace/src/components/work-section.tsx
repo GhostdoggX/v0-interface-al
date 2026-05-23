@@ -13,7 +13,6 @@ const experiments = [
   { title: "Asset Discovery", medium: "Research", description: "Identification and verification of undisclosed assets and holdings." },
   { title: "Threat Assessment", medium: "Security", description: "Evaluation of digital footprints and potential exposure risks." },
   { title: "Search for Missing Person", medium: "Location", description: "Professional tracing and location services for missing individuals with discretion and care." },
-  { title: "Physical Asset Location", medium: "Recovery", description: "Identification and tracking of concealed or misappropriated assets across jurisdictions." },
   { title: "Executive Protection", medium: "Security", description: "Comprehensive protection services and risk assessment for high-profile individuals." },
   { title: "Brand Protection", medium: "Defense", description: "Monitoring and safeguarding brand integrity against counterfeiting and misuse." },
 ]
