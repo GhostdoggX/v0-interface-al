@@ -146,7 +146,7 @@ export function WorkSection() {
           <span className="font-mono text-[10px] uppercase tracking-[0.3em] text-accent">02 / Services</span>
           <h2 className="mt-2 md:mt-4 font-[var(--font-bebas)] text-3xl sm:text-5xl md:text-7xl tracking-tight">CAPABILITIES</h2>
           <p className="mt-3 max-w-md font-mono text-xs text-muted-foreground leading-relaxed">
-            From corporate due diligence to digital forensics and open-source investigations.
+            From corporate due diligence to digital forensics and open-source analysis.
           </p>
         </div>
         <div className="flex items-end gap-[10px]">

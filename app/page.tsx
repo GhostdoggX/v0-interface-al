@@ -11,7 +11,7 @@ import { DropdownMenuNav } from "@/components/dropdown-menu-nav"
 
 export const metadata: Metadata = {
   title: 'Wolfhound Trace - Professional OSINT & Corporate Investigation Services',
-  description: 'Expert Physical Security Specialist, OSINT Investigation, Corporate Investigation Services, HUMINT Services, and Physical and Cyber Security Fusion. Secure, precise, and legally grounded investigative solutions.',
+  description: 'Expert Physical Security Specialist, OSINT Investigation, Corporate Investigation Services, HUMINT Services, and Physical and Cyber Security Fusion. Secure, precise, and legally grounded analytic solutions.',
   keywords: [
     'Physical Security Specialist',
     'Corporate Investigation Services',
@@ -126,10 +126,10 @@ const jsonLd = [
       },
       {
         "@type": "Question",
-        "name": "What types of investigations does Wolfhound Trace handle?",
+        "name": "What types of analysis does Wolfhound Trace handle?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Wolfhound Trace handles a wide range of investigations including corporate due diligence, digital forensics, cryptocurrency tracing, asset discovery, threat assessment, missing person searches, executive protection, and brand protection."
+          "text": "Wolfhound Trace handles a wide range of analysis including corporate due diligence, digital forensics, cryptocurrency tracing, asset discovery, threat assessment, missing person searches, executive protection, and brand protection."
         }
       },
       {
@@ -137,12 +137,12 @@ const jsonLd = [
         "name": "Is Wolfhound Trace compliant with GDPR and data protection laws?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. All investigations conducted by Wolfhound Trace are carried out in full compliance with applicable laws and regulations, including GDPR and the Swiss Federal Act on Data Protection (nFADP). Methods are ethically sound and legally defensible in any jurisdiction."
+          "text": "Yes. All analysis conducted by Wolfhound Trace are carried out in full compliance with applicable laws and regulations, including GDPR and the Swiss Federal Act on Data Protection (nFADP). Methods are ethically sound and legally defensible in any jurisdiction."
         }
       },
       {
         "@type": "Question",
-        "name": "How confidential are Wolfhound Trace's investigation services?",
+        "name": "How confidential are Wolfhound Trace's analysis services?",
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Confidentiality is a core principle at Wolfhound Trace. All client communications are handled with absolute discretion. The firm uses encrypted communications and strict access controls to ensure sensitive information is protected throughout every engagement."

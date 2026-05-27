@@ -11,7 +11,7 @@ const signalsTop = [
   {
     date: "2025.06.10",
     title: "Crypto Forensics",
-    note: "Enhanced blockchain analysis capabilities for cross-chain investigations.",
+    note: "Enhanced blockchain analysis capabilities for cross-chain analysis.",
   },
   {
     date: "2025.05.28",

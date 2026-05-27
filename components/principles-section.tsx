@@ -19,7 +19,7 @@ export function PrinciplesSection() {
         { text: "DISCREET", highlight: true },
         { text: " HANDLING", highlight: false },
       ],
-      description: "Confidential handling of sensitive investigations and client communications.",
+      description: "Confidential handling of sensitive analysis and client communications.",
       align: "left",
     },
     {

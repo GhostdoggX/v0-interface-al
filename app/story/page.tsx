@@ -136,7 +136,7 @@ export default function StoryPage() {
           {/* Contact CTA */}
           <section>
             <p className="font-mono text-sm mb-6" style={{ color: 'rgb(192,192,192)' }}>
-              Ready to discuss your investigation needs?
+              Ready to discuss your analysis needs?
             </p>
             <a
               href="mailto:enquiries@wolfhoundtrace.com?subject=Service%20initial%20consultation"

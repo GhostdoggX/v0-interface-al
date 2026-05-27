@@ -31,7 +31,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="font-[var(--font-bebas)] text-2xl tracking-tight text-foreground mb-4">1. Scope and Controller</h2>
             <p>
-              This Privacy Policy explains how Wolfhound Trace processes personal data in connection with its website, client communications, and professional investigative and intelligence services. For the purposes of applicable data protection laws, including the General Data Protection Regulation (GDPR) and the Swiss Federal Act on Data Protection (nFADP), Wolfhound Trace acts as a data controller with respect to personal data processed for its own business operations.
+              This Privacy Policy explains how Wolfhound Trace processes personal data in connection with its website, client communications, and professional analytic and intelligence services. For the purposes of applicable data protection laws, including the General Data Protection Regulation (GDPR) and the Swiss Federal Act on Data Protection (nFADP), Wolfhound Trace acts as a data controller with respect to personal data processed for its own business operations.
             </p>
           </section>
 
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="font-[var(--font-bebas)] text-2xl tracking-tight text-foreground mb-4">3. Categories of Data We May Process</h2>
             <p>
-              Depending on the nature of the engagement, we may process identification data, contact details, professional information, communication records, technical website data, and other information necessary to perform due diligence, investigative, or intelligence-related work. Where permitted by law and required for a specific mandate, we may also process data obtained from lawful public sources or from third parties acting within their legal authority.
+              Depending on the nature of the engagement, we may process identification data, contact details, professional information, communication records, technical website data, and other information necessary to perform due diligence, analytic, or intelligence-related work. Where permitted by law and required for a specific mandate, we may also process data obtained from lawful public sources or from third parties acting within their legal authority.
             </p>
           </section>
 
@@ -55,7 +55,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="font-[var(--font-bebas)] text-2xl tracking-tight text-foreground mb-4">4. Purposes of Processing</h2>
             <p>
-              We process personal data for the purpose of providing our services, responding to enquiries, managing client relationships, conducting due diligence, supporting investigations, maintaining business records, complying with legal and regulatory obligations, and protecting the security and integrity of our systems and operations. We do not use personal data for unrelated or incompatible purposes.
+              We process personal data for the purpose of providing our services, responding to enquiries, managing client relationships, conducting due diligence, supporting analysis, maintaining business records, complying with legal and regulatory obligations, and protecting the security and integrity of our systems and operations. We do not use personal data for unrelated or incompatible purposes.
             </p>
           </section>
 
@@ -95,7 +95,7 @@ export default function PrivacyPage() {
           <section>
             <h2 className="font-[var(--font-bebas)] text-2xl tracking-tight text-foreground mb-4">9. Your Rights</h2>
             <p>
-              Subject to applicable law, you may have rights to access, rectify, erase, restrict, object to processing, and request data portability. Where processing is based on consent, you may withdraw that consent at any time without affecting the lawfulness of processing carried out before withdrawal. In some cases, these rights may be limited by law, particularly where disclosure would affect legal privileges, ongoing investigations, the rights of others, or our legal obligations.
+              Subject to applicable law, you may have rights to access, rectify, erase, restrict, object to processing, and request data portability. Where processing is based on consent, you may withdraw that consent at any time without affecting the lawfulness of processing carried out before withdrawal. In some cases, these rights may be limited by law, particularly where disclosure would affect legal privileges, ongoing analysis, the rights of others, or our legal obligations.
             </p>
           </section>
 
@@ -131,7 +131,7 @@ export default function PrivacyPage() {
           <section className="pt-8 border-t border-border/30">
             <h2 className="font-[var(--font-bebas)] text-2xl tracking-tight text-foreground mb-4">Legal Disclaimer</h2>
             <p>
-              Wolfhound Trace provides professional open-source intelligence (OSINT), digital investigation, and due diligence services. All investigations are conducted in compliance with applicable laws and regulations, including GDPR and data protection standards.
+              Wolfhound Trace provides professional open-source intelligence (OSINT), digital analysis, and due diligence services. All analysis are conducted in compliance with applicable laws and regulations, including GDPR and data protection standards.
             </p>
           </section>
         </div>
